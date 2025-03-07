@@ -841,10 +841,10 @@
                     <b>In-distribution results</b>
                 </h1>
                 <div class="table-container is-max-desktop">
-                    <table class="table is-bordered is-striped is-narrow is-hoverable"
-                           style="margin: 0 auto; font-size: 0.9rem;">
+                    <table style="border-collapse: collapse; width: 65%; font-family: sans-serif; text-align: center; margin: 0 auto; font-size: 0.9rem;">
                         <thead>
-                        <tr>
+                        <!-- Top rule -->
+                        <tr style="border-bottom: 2px solid black; border-top: 2px solid black;">
                             <th rowspan="2">Subject LLM</th>
                             <th rowspan="2">LLM Accuracy &#8593;</th>
                             <th colspan="2">Demands (RF)</th>
@@ -859,6 +859,8 @@
                             <th>AUROC &#8593;</th>
                             <th>ECE &#8595;</th>
                         </tr>
+                        <!-- Insert a horizontal rule equivalent to the \midrule after header -->
+                        <tr style="border-top: 2px solid black;"></tr>
                         </thead>
                         <tbody>
                         <tr>
@@ -921,7 +923,7 @@
                             <td>0.848</td>
                             <td>0.031</td>
                         </tr>
-                        <tr>
+                        <tr style="border-top: 1px solid black;">
                             <td>LLaMA-3.2-1B-Instruct</td>
                             <td>0.216</td>
                             <td>0.785</td>
@@ -971,7 +973,7 @@
                             <td>0.864</td>
                             <td>0.040</td>
                         </tr>
-                        <tr>
+                        <tr style="border-top: 1px solid black;">
                             <td>DK-R1-Dist-Qwen-1.5B</td>
                             <td>0.353</td>
                             <td>0.781</td>
@@ -1011,7 +1013,7 @@
                             <td>0.839</td>
                             <td>0.045</td>
                         </tr>
-                        <tr>
+                        <tr style="border-top: 1px solid black;">
                             <td>Weighted Average</td>
                             <td>---</td>
                             <td>0.839</td>
@@ -1021,15 +1023,31 @@
                             <td><strong>0.840</strong></td>
                             <td>0.043</td>
                         </tr>
+                        <!-- Bottom rule -->
+                        <tr style="border-top: 2px solid black;"></tr>
                         </tbody>
                     </table>
                 </div>
 
+
+
+                <div class="content has-text-justified">
+                    <p>
+                        The table...
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" style="text-align: center; margin-bottom: 4rem;">
+                <h1 class="title is-4 has-text-centered">
+                    <b>Out-of-distribution results</b>
+                </h1>
+
                 <div class="table-container is-max-desktop">
-                    <table class="table is-bordered is-striped is-narrow is-hoverable"
-                           style="margin: 0 auto; font-size: 0.9rem;">
+                    <table style="border-collapse: collapse; width: 65%; font-family: sans-serif; text-align: center;margin: 0 auto; font-size: 0.9rem;">
                         <thead>
-                        <tr>
+                        <!-- Top rule -->
+                        <tr style="border-bottom: 2px solid black; border-top: 2px solid black;">
                             <th rowspan="2">Subject LLM</th>
                             <th rowspan="2">LLM Accuracy &#8593;</th>
                             <th colspan="2">Demands (RF)</th>
@@ -1044,8 +1062,11 @@
                             <th>AUROC &#8593;</th>
                             <th>ECE &#8595;</th>
                         </tr>
+                        <!-- Insert a horizontal rule equivalent to the \midrule after header -->
+                        <tr style="border-top: 2px solid black;"></tr>
                         </thead>
                         <tbody>
+                        <!-- Group 1 -->
                         <tr>
                             <td>Babbage-002</td>
                             <td>0.102</td>
@@ -1096,6 +1117,7 @@
                             <td>0.684</td>
                             <td>0.132</td>
                         </tr>
+                        <!-- Group 1 separator -->
                         <tr>
                             <td>OpenAI o1</td>
                             <td>0.843</td>
@@ -1106,7 +1128,8 @@
                             <td>0.704</td>
                             <td>0.095</td>
                         </tr>
-                        <tr>
+                        <!-- Group 2 -->
+                        <tr style="border-top: 1px solid black;">
                             <td>LLaMA-3.2-1B-Instruct</td>
                             <td>0.216</td>
                             <td><strong>0.716</strong></td>
@@ -1146,6 +1169,7 @@
                             <td>0.721</td>
                             <td>0.144</td>
                         </tr>
+                        <!-- Group 2 separator -->
                         <tr>
                             <td>LLaMA-3.1-405B-Instruct</td>
                             <td>0.683</td>
@@ -1156,7 +1180,8 @@
                             <td>0.712</td>
                             <td>0.135</td>
                         </tr>
-                        <tr>
+                        <!-- Group 3 -->
+                        <tr style="border-top: 1px solid black;">
                             <td>DK-R1-Dist-Qwen-1.5B</td>
                             <td>0.353</td>
                             <td><strong>0.705</strong></td>
@@ -1196,31 +1221,24 @@
                             <td>0.696</td>
                             <td>0.100</td>
                         </tr>
-                        <tr>
+                        <!-- Group 4 -->
+                        <tr style="border-top: 1px solid black;">
                             <td>Weighted Average</td>
                             <td>---</td>
                             <td><strong>0.747</strong></td>
                             <td><strong>0.037</strong></td>
                             <td>0.480</td>
                             <td>0.114</td>
-                            <td><strong>0.692</strong></td>
+                            <td>0.692</td>
                             <td>0.121</td>
                         </tr>
+                        <!-- Bottom rule -->
+                        <tr style="border-top: 2px solid black;"></tr>
                         </tbody>
                     </table>
+
                 </div>
 
-                <div class="content has-text-justified">
-                    <p>
-                        The table...
-                    </p>
-                </div>
-            </div>
-
-            <div class="item" style="text-align: center; margin-bottom: 4rem;">
-                <h1 class="title is-4 has-text-centered">
-                    <b>Out-of-distribution results</b>
-                </h1>
 
                 <div class="content has-text-justified">
                     <p>
