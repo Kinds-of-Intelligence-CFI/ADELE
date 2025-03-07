@@ -272,67 +272,23 @@
                      style="width: 100%;">
             </div>
             <h2 class="subtitle is-4 has-text-justified">
-                We introduce
+                We introduce 18 rubrics for Demand-Level-Annotation (DeLeAn) of general scales and use them
+                to annotate 63 tasks from 20 benchmarks with an LLM, obtaining the Annotated-Demand-Levels
+                (ADeLe) Battery.
+                We then run LLMs on the battery (1) and plot <em>characteristic curves</em> (showing the LLMs'
+                performance as a function of each demand) and extract ability profile explaining what the LLMs can
+                do (2).
+                <br>
+                <br>
+                At the same time, we can perform demand-level-annotation of any benchmark (A)
+                and analyse the demand histograms and profiles (B) to understand what benchmark really measure.
+                <br>
+                <br>
+                Finally, we can train an "assessor" mapping the annotated demands into the question-level performance of an LLM on
+                ADeLe (3) to predict the LLM's performance on any new task annotated with the DeLeAn rubrics (C). This achieves
+                superb out-of-distribution predictive power, demonstrating that the general demands anticipate performance
+                in novel situations.
 
-
-                Processes to explain and predict performance for new systems and benchmarks. Top: ``System Process'':
-                Steps for each new AI system: (1) Run the new system on the annotated-demand-levels (\ADeLe) Battery,
-                %\todo{2 has been removed in preparation for this to be removed in the figure} %(2) Grade the output of
-                every instance with our provided Scorer,
-                (2) Plot characteristic curves for all dimensions and extract the ability profile for the system, and,
-                optionally, (3) Train a simple assessor using the annotated levels as inputs and the score as output.
-                Bottom: ``Task Process'': Steps for each new task or benchmark: (A) Apply the demand-level-annotation
-                (\DeLeAn) rubrics to the new tasks using a standard LLM,
-                (B) Get demand histograms and demand profiles that explain what demands the tasks require, and,
-                optionally,
-                (C) Predict performance for the new tasks for any system that has built an assessor after the ``System
-                Process". Assessors based on the demand profile have especially higher predictive power in
-                out-of-distribution settings than other baseline assessors, anticipating validity in novel situations.
-
-
-                \item We can {\bf
-                carve %synthesise
-                the space of capabilities %and attainment
-                into a hierarchical set of general scales}.
-                %\cite{stevens1946theory}.
-                %These non-saturating scales in the unlimited range $(0,\infty)$ are estimated through
-                The \DeLeAn rubrics (see Table~\ref{tab:dimensions})
-                are applied systematically to the 16,108 instances of
-                %for the annotated-demand-levels battery of language-based tasks (
-                the \ADeLe battery (see Table~\ref{tab:selected_benchmarks_and_tasks}), yielding 289,944 annotations.
-                The clarity of the rubrics is validated by how well the LLM annotates scores in agreement with humans.
-                The moderate correlations between dimensions (Figure~\ref{fig:demand_correlation}) suggest potentially
-                distinctive capabilities, with instances that differ on any pair of capabilities, and correlations being
-                consistent with the hierarchy.
-                \item We can {\bf explain what common benchmarks really measure}. In particular, we first discover
-                various demands in extraneous dimensions such as the \textit{atypicality} (from common to unique),
-                \textit{volume} (from small to large) and \textit{unguessability} (from multiple-choice to open-ended),
-                suggesting contamination, amalgamation and funnelling, respectively %, that are highly correlated with
-                other demands and predictive of a great proportion of model success.
-                (see Figure~\ref{fig:demand_correlation} and Table~\ref{tab:main-predictability-results-only-AT-UG-VO}).
-                Beyond these effects, many benchmarks lack either specificity or sensitivity: they do not have a minimum
-                number of examples of all demands for the dimensions their designers claimed they measure, and they
-                include non-zero demands on other dimensions. % they should not be measuring.
-                See Figure~\ref{fig:benchmark_demand_profiles}.
-                \item We can {\bf explain what AI systems can do}. In our experiments with three families of LLMs, we
-                find that the ability scores at knowledge dimensions are mostly determined by model size (scaling and
-                distillation), while quantitative and logical reasoning, learning and abstraction, and perhaps
-                surprisingly, mind modelling and social capabilities are boosted in chain-of-thought, inference-heavy
-                models (such as OpenAI's O1 and DeepSeek's R1-Distill). See
-                Figures~\ref{fig:characteristic_curves_combined} and \ref{fig:model_capability_profiles}. Consistent
-                results can be obtained with a small sample of the \ADeLe battery (\ADeLeLight, Figure
-                \ref{fig:model_capability_profiles_light}) that mostly removes instances with redundant demand profiles.
-                \item We can {\bf predict performance for new task instances}. High predictive power %(discrimination
-                and calibration)
-                at the instance level is possible, superior than black-box assessor baselines based on embeddings or
-                fine-tuning, especially in out-of-distribution settings (new tasks and new benchmarks). This opens up a
-                range of applications, such as better routing methods to choose what model to use
-                \cite{ong2024routellm}, safety operating areas where assurance is guaranteed \cite{zhou2024predictable}
-                and anticipatory reject rules when harm or cost is anticipated \cite{zhou2022reject,predictaboard}.
-                %provides extra validation and insight about the demands by using feature reduction and dimension
-                aggregation.
-                See Tables~\ref{tab:main-id-predictability-results}, ~\ref{tab:main-task-ood-predictability-results} and
-                ~\ref{tab:main-benchmark-ood-predictability-results}, and Figure~\ref{fig:average_feature_importance}
             </h2>
         </div>
     </div>
@@ -1028,7 +984,6 @@
                         </tbody>
                     </table>
                 </div>
-
 
 
                 <div class="content has-text-justified">
