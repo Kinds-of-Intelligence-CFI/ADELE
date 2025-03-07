@@ -284,9 +284,12 @@
                 and analyse the demand histograms and profiles (B) to understand what benchmark really measure.
                 <br>
                 <br>
-                Finally, we can train an "assessor" mapping the annotated demands into the question-level performance of an LLM on
-                ADeLe (3) to predict the LLM's performance on any new task annotated with the DeLeAn rubrics (C). This achieves
-                superb out-of-distribution predictive power, demonstrating that the general demands anticipate performance
+                Finally, we can train an "assessor" mapping the annotated demands into the question-level performance of
+                an LLM on
+                ADeLe (3) to predict the LLM's performance on any new task annotated with the DeLeAn rubrics (C). This
+                achieves
+                superb out-of-distribution predictive power, demonstrating that the general demands anticipate
+                performance
                 in novel situations.
 
             </h2>
@@ -333,23 +336,34 @@
 <section class="hero is-small">
     <div class="hero-body">
         <div class="container">
-            <h1 class="title is-3 has-text-centered">Demand annotation of benchmarks on general scales</h1>
+            <h1 class="title is-3 has-text-centered">Demand annotation of benchmarks on general scales<br></h1>
             <div class="content has-text-justified">
                 <div class="subtitle is-5">
-                    We use
-
-                    bla bla
-
+                    <br>
                 </div>
 
             </div>
-        </div>
 
+        </div>
         <div class="container is-max-desktop">
             <div class="item" style="text-align: center; margin-bottom: 4rem;">
                 <h1 class="title is-4 has-text-centered">
                     <b>General scales and rubrics</b>
                 </h1>
+                <div class="content has-text-justified">
+                    <p>
+                        The general dimensions we introduce are grounded in cognitive science (such as the <a
+                            href="https://en.wikipedia.org/wiki/Cattell%E2%80%93Horn%E2%80%93Carroll_theory">Cattell–Horn–Carroll
+                        theory</a>). We adapt 7 broad capabilities from <a
+                            href="https://jair.org/index.php/jair/article/view/12647">Tolan et al. (2021)</a> applicable
+                        to LLMs and add subdimensions.
+                        We also add domain ‘knowledge’ (with 5 subdimensions) and 3 ‘extraneous’ dimensions:
+                        Atypicality, Volume and Unguessability, to account for elements that make the task more
+                        challenging independently of primordial or knowledge demands.
+                    </p>
+
+                </div>
+
                 <div class="table-container is-max-desktoprr">
                     <table class="table is-bordered is-narrow is-hoverable"
                            style="margin: 0 auto; font-size: 0.9rem;">
@@ -620,9 +634,13 @@
                 </div>
 
 
-                <div class="content has-text-justified">
+                <div class="content has-text-justified is-5">
                     <p>
-                        TEXT
+                        We develop a rubric with a quantitative scale between 0 and 5+ for each dimension, with 0 representing
+                        absence of demand and 5+ representing 5 or above.
+                        Each of the 18 demand rubrics includes a general description of the dimension,
+                        a description of the levels and 3 anchors per level.
+                        The rubric underwent several round of validations with cognitive science experts.
                     </p>
                 </div>
             </div>
@@ -632,12 +650,20 @@
                     <h1 class="title is-4 has-text-centered">
                         <b>Automated annotation</b>
                     </h1>
+                    <div class="content has-text-justified">
+                        <p>
+                            We use GPT-4o to annotate 63 tasks from 20 benchmarks. The image below show examples of annotation outputs.
+                        </p>
+                    </div>
                     <img src="static/images/optimized_svgs/instance_demand_annotations_examples_B.svg"
                          alt="Example of annotations"
                          style="width: 75%; object-fit: contain; margin: 0 auto 20px auto;"/>
                     <div class="content has-text-justified">
                         <p>
-                            TEXT
+                            We check the within-group agreement
+                            rWG (an index for ordinal-scale interrater agreement) between GPT-4o and the Delphi-agreed
+                            demand level from five humans and find they are  well above 0.75 for all dimensions (averaging to 0.86
+                            , higher than the within-human score).
                         </p>
                     </div>
                 </div>
