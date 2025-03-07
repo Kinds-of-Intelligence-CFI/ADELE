@@ -56,14 +56,15 @@ Parts of this project page were adopted from the [Nerfies](https://nerfies.githu
 # Website structure: 
 website structure: 
 
-- Annotation rubrics 
-	- table with dimensions (in toggle box) -> future: click to see the detailed rubric for each dimension
-	- example of annotations (Fig 2)
-	- the rubrics levels in the battery (Fig 5). 
-		- toggle box: detail for each of the benchmarks (fig 6)
-		- correlation between the various demands (Fig 4)
-- Profiling LLMs: 
-	- characterstic curves: demand space: fig 3
-	- toggle box: characteristic curves for all LLMs and demands (Fig7) -> future: split that figure across demands and allow to see each one individually.
-	- profiles -> Fig 8
+- Annotation rubrics
+  - table with dimensions (in toggle box) -> future: click to see the detailed rubric for each dimension
+  - example of annotations (Fig 2)
+  - the rubrics levels in the battery (Fig 5). -> future: make the figure interactive
+    - toggle box: detail for each of the benchmarks (fig 6)
+    - correlation between the various demands (Fig 4)  -> future: make the figure interactive
+- Profiling LLMs:
+  - characterstic curves: demand space: fig 3
+  - toggle box: characteristic curves for all LLMs and demands (Fig7) -> future: split that figure across demands and
+    allow to see each one individually; make them interactive
+  - profiles -> Fig 8. Future: make the figure interactive
 - Predicting performance: a couple of tables (in-distribution and OOD benchmark).
