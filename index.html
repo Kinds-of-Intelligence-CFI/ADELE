@@ -111,16 +111,6 @@
       </a>
     </span>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
                             <span class="link-block">
       <a href="https://huggingface.co/ADD?"
          target="_blank"
@@ -500,156 +490,210 @@
     </div>
 </section>
 
+<section class="section hero">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-3 has-text-centered">The ADeLe battery<br></h1>
+            <div class="content has-text-justified">
+                <div class="subtitle is-5">
+                    <br>
+                </div>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+            </div>
+
+
+            <div class="container">
+                <div class="item" style="text-align: center; margin-bottom: 4rem;">
+                    <h1 class="title is-4 has-text-centered">
+                        <b>Profiling benchmark demands</b>
+                    </h1>
+                    <img src="static/images/optimized_svgs/demand_distribution_polar.svg"
+                         alt="Demands on the overall collection ADELE"
+                         style="width: 45%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    <div class="content has-text-justified">
+                        <p>
+                            TEXT
+                        </p>
+                    </div>
+                </div>
+
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+
+                        <h1 class="title is-4 has-text-centered">
+                            <b>Demands for each of the benchmarks</b>
+                        </h1>
+                        <details>
+                            <summary style="cursor: pointer">Expand
+                            </summary>
+                            <img src="static/images/optimized_svgs/benchmark_demand_profiles.svg"
+                                 alt="Demands for each of the benchmarks"
+                                 style="width: 100%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                            <div class="content has-text-justified">
+                                <p>
+                                    TEXT
+                                </p>
+                            </div>
+                        </details>
+
+
+                        <h1 class="title is-4 has-text-centered">
+                            <b>Correlation across demands in the ADELE collection</b>
+                        </h1>
+                        <details>
+                            <summary style="cursor: pointer">Expand
+                            </summary>
+                            <img src="static/images/optimized_svgs/demand_correlation.svg"
+                                 alt="Correlation across demands in the ADELE collection"
+                                 style="width: 50%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                            <div class="content has-text-justified">
+                                <p>
+                                    TEXT
+                                </p>
+                            </div>
+                        </details>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
-</div>
-</div>
 </section>
+
 <!-- End image carousel -->
 
 
+<section class="section hero is-light">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-3 has-text-centered">Profiling LLM capabilities</h1>
+            <div class="content has-text-justified">
+                <div class="subtitle is-6">
+                    some text
+                </div>
 
+            </div>
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+            <h1 class="title is-4 has-text-centered">Characteristic curves: slicing the demand-ability
+                space</h1>
+            <div class="content has-text-justified">
+                <div class="subtitle is-6">
+                    some text
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 5px;">
+                        <img src="static/images/optimized_svgs/SCC_llama3d1-405b_KNn.svg"
+                             alt="Characteristic curve"
+                             style="width: 45%;">
+                    </div>
+                </div>
+                <p style="margin-top: 1rem;">
+                    Characteristic curve
+                </p>
+            </div>
         </div>
-      </div>
+
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+
+                <h1 class="title is-4 has-text-centered">
+                    <b>Characteristic curves for all considered LLMs and demands</b>
+                </h1>
+                <details>
+                    <summary style="cursor: pointer">
+                        <em>Expand</em>
+                    </summary>
+                    <img src="static/images/optimized_svgs/Combined_SCCs_MaxAuxDiff=0_DupThresh=100.svg"
+                         alt="Characteristic curves for all considered LLMs and demands"
+                         style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    <div class="content has-text-justified">
+                        <p>
+                            TEXT
+                        </p>
+                    </div>
+                </details>
+
+
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="title is-4 has-text-centered">Profiles of the considered LLMs</h1>
+            <div class="content has-text-justified">
+                <div class="subtitle is-6">
+                    some text
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 5px;">
+                        <img src="static/images/optimized_svgs/capability_radar_plot_MaxAuxDiff=0_DubThresh=100.svg"
+                             alt="Profiles of the considered LLMs"
+                             style="width: 90%;">
+                    </div>
+                </div>
+                <p style="margin-top: 1rem;">
+                    Profiles
+                </p>
+
+
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+        <h2 class="title">BibTeX</h2>
+        <pre><code>BibTex Code Here</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
 
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+<section class="section">
+    <div class="container is-max-desktop">
+        <h2 class="title">Acknowledgements</h2>
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-11">
+                <h2 class="subtitle has-text-left is-6">
+                    This research project has benefitted from the Microsoft Accelerate Foundation Models
+                    Research (AFMR)
+                    grant program.
+                </h2>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</section>
+
+
+<footer class="footer py-2">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-8">
+                <div class="content is-small has-text-right">
+                    <p>
+                        This page was built using the <a
+                            href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                            target="_blank">Academic
+                        Project Page Template</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <!-- Statcounter tracking code -->
-  
+
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-    <!-- End of Statcounter Code -->
+<!-- End of Statcounter Code -->
 
-  </body>
-  </html>
+</body>
+</html>
