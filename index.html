@@ -45,6 +45,7 @@
     <script src="static/js/index.js"></script>
 
     <style>
+        /* Your existing global styles */
         * {
             font-family: 'Google Sans', sans-serif !important;
         }
@@ -83,6 +84,90 @@
             .container {
                 padding: 1rem;
             }
+        }
+
+        /* CSS from the LaTeX conversion */
+        :root {
+            --grey: rgb(128, 128, 128);
+            --mybgcolor1: #006d77;
+            --mybgcolor2: #edf6f9;
+            --mybg: #f1f2f6;
+            --mytitle: #758bfd;
+            --mybg2: #ffffff;
+            --primordial: #d1495b;
+            --mytitleAS: #d1495b;
+            --mytitleCE: #d1495b;
+            --mytitleCL: #d1495b;
+            --mytitleMC: #d1495b;
+            --mytitleMS: #d1495b;
+            --mytitleQL: #d1495b;
+            --mytitleSN: #d1495b;
+            --knowledge: #00798c;
+            --mytitleKN: #00798c;
+            --others: #30638e;
+            --mytitleVO: #30638e;
+            --mytitleAT: #30638e;
+            --nd: #edae49;
+            --mytitleUG: #edae49;
+            --RQ: #456990;
+            --darkblue: rgb(0, 0, 139);
+            --darkred: rgb(139, 0, 0);
+            --darkgreen: rgb(0, 139, 0);
+        }
+
+        body {
+            background-color: var(--mybg2);
+            padding: 20px;
+        }
+
+        .rubricfont {
+            font-size: 6pt;
+            line-height: 8pt;
+        }
+
+        .tcolorbox {
+            background-color: var(--mybg);
+            border: 1px solid var(--mytitleAS);
+            border-radius: 3px; /* approximates 1mm */
+            padding: 4pt 6pt 4pt 4pt;
+            margin: 10px 0;
+        }
+
+        /* Ensure the title is left-aligned */
+        .tcolorbox-title {
+            background-color: var(--mytitleAS);
+            color: white;
+            font-family: sans-serif;
+            font-size: small;
+            padding: 4pt;
+            margin-bottom: 6pt;
+            text-align: left;
+        }
+
+        /* Justify text in the box body */
+        .tcolorbox-body {
+            text-align: justify;
+        }
+
+        ol.levels {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ol.levels > li {
+            margin-bottom: 10px;
+        }
+
+        ol.levels > li::before {
+            content: attr(data-label);
+            font-weight: bold;
+            color: var(--mytitleAS);
+            margin-right: 4px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -170,41 +255,45 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small  is-light">
+<!-- Image carousel -->
+<section class="hero is-small is-light">
     <div class="hero-body">
         <div class="container">
-            <h1 class="title is-3 has-text-centered">Demand annotation of benchmarks on general scales<br></h1>
+            <h1 class="title is-3 has-text-centered">
+                Demand annotation of benchmarks on general scales<br>
+            </h1>
             <div class="content has-text-justified">
                 <div class="subtitle is-5">
                     <br>
                 </div>
-
             </div>
-
         </div>
         <div class="container is-max-desktop">
             <div class="item" style="text-align: center; margin-bottom: 4rem;">
                 <h1 class="title is-4 has-text-centered">
-                    <b>General scales and rubrics</b>
+                    <b>The considered dimensions</b>
                 </h1>
                 <div class="content has-text-justified">
                     <p>
-                        The general dimensions we introduce are grounded in cognitive science (such as the <a
+                        The DeLeAn rubrics consider 7 broad capabilities from
+                        <a href="https://jair.org/index.php/jair/article/view/12647">Tolan et al. (2021)</a> grounded in
+                        cognitive science (such as the <a
                             href="https://en.wikipedia.org/wiki/Cattell%E2%80%93Horn%E2%80%93Carroll_theory">Cattell–Horn–Carroll
-                        theory</a>). We adapt 7 broad capabilities from <a
-                            href="https://jair.org/index.php/jair/article/view/12647">Tolan et al. (2021)</a> applicable
-                        to LLMs and add subdimensions.
-                        We also add domain ‘knowledge’ (with 5 subdimensions) and 3 ‘extraneous’ dimensions:
-                        Atypicality, Volume and Unguessability, to account for elements that make the task more
-                        challenging independently of primordial or knowledge demands.
+                        theory</a>) and applicable
+                        to LLMs, and add subdimensions (leading to 11).
+                        It also includes domain ‘knowledge’ (with 5 subdimensions) and 2 ‘extraneous’ dimensions:
+                        Atypicality and Volume,
+                        to account for elements that make the task more challenging independently of primordial or
+                        knowledge demands.
+                        An additional dimension, Unguessability, is computed algorithmically by considering the number
+                        of choices, instead of using a rubric.
                     </p>
-
                 </div>
 
-
+                <!-- General Scales Table -->
                 <div class="table-container is-max-desktop">
-                    <table class="table is-bordered is-narrow is-hoverable"
-                           style="background-color: transparent;margin: 0 auto; font-size: 0.9rem;">
+                    <table class="table is-bordered is-striped is-narrow is-hoverable"
+                           style="background-color: transparent; margin: 0 auto; font-size: 0.9rem;">
                         <thead>
                         <tr>
                             <th></th>
@@ -230,7 +319,6 @@
                             </td>
                         </tr>
                         <tr></tr>
-
                         <!-- Block 2: CE -->
                         <tr>
                             <td rowspan="4" style="color: #d1495b; font-family: monospace; font-size: small;">CE</td>
@@ -256,7 +344,6 @@
                             </td>
                         </tr>
                         <tr></tr>
-
                         <!-- Block 3: CL -->
                         <tr>
                             <td rowspan="3" style="color: #d1495b; font-family: monospace; font-size: small;">CL</td>
@@ -273,7 +360,6 @@
                         </tr>
                         <tr></tr>
                         <tr></tr>
-
                         <!-- Block 4: MC -->
                         <tr>
                             <td rowspan="6" style="color: #d1495b; font-family: monospace; font-size: small;">MC</td>
@@ -309,7 +395,6 @@
                             </td>
                         </tr>
                         <tr></tr>
-
                         <!-- Block 5: MS -->
                         <tr>
                             <td rowspan="3" style="color: #d1495b; font-family: monospace; font-size: small;">MS</td>
@@ -326,7 +411,6 @@
                         </tr>
                         <tr></tr>
                         <tr></tr>
-
                         <!-- Block 6: QL -->
                         <tr>
                             <td rowspan="4" style="color: #d1495b; font-family: monospace; font-size: small;">QL</td>
@@ -350,7 +434,6 @@
                             <td>Work with and reason about quantities, numbers, and numerical relationships.</td>
                         </tr>
                         <tr></tr>
-
                         <!-- Block 7: SN -->
                         <tr>
                             <td rowspan="2" style="color: #d1495b; font-family: monospace; font-size: small;">SN</td>
@@ -365,7 +448,6 @@
                             </td>
                         </tr>
                         <tr></tr>
-
                         <!-- Block 8: KN -->
                         <tr>
                             <td rowspan="10" style="color: #00798c; font-family: monospace; font-size: small;">KN</td>
@@ -421,7 +503,6 @@
                             </td>
                         </tr>
                         <tr></tr>
-
                         <!-- Block 9: AT -->
                         <tr>
                             <td rowspan="2" style="color: #30638e; font-family: monospace; font-size: small;">AT</td>
@@ -437,7 +518,6 @@
                             </td>
                         </tr>
                         <tr></tr>
-
                         <!-- Block 10: VO -->
                         <tr>
                             <td rowspan="2" style="color: #30638e; font-family: monospace; font-size: small;">VO</td>
@@ -451,7 +531,6 @@
                             </td>
                         </tr>
                         <tr></tr>
-
                         <!-- Block 11: UG -->
                         <tr>
                             <td rowspan="2" style="color: #edae49; font-family: monospace; font-size: small;">UG</td>
@@ -471,50 +550,618 @@
                     </table>
                 </div>
 
-
-                <div class="content has-text-justified is-5">
+                <h1 class="title is-4 has-text-centered">
+                    <b>The rubrics</b>
+                </h1>
+                <div class="content has-text-centered">
                     <p>
-                        We develop a rubric with a quantitative scale between 0 and 5+ for each dimension, with 0
-                        representing
-                        absence of demand and 5+ representing 5 or above.
-                        Each of the 18 demand rubrics includes a general description of the dimension,
-                        a description of the levels and 3 anchors per level.
-                        The rubric underwent several round of validations with cognitive science experts.
-
-                        ADD RUBRIC!
+                        Below we show the rubrics for each dimension.
                     </p>
                 </div>
-            </div>
 
+                <!-- Dimension Selector and Rubric Sections -->
+                <div id="dimension-selector-container" style="text-align: center; margin-top: 2rem;">
+                    <label for="dimension-selector"><strong>Select a Dimension:</strong></label>
+                    <select id="dimension-selector" style="margin-left: 0.5rem;">
+                        <option value="" selected>-- Choose a Dimension --</option>
+                        <option value="AS">Attention and Scan (AS)</option>
+                        <option value="CEc">Verbal Comprehension (CEc)</option>
+                        <option value="CEe">Verbal Expression (CEe)</option>
+                        <option value="CL">Conceptualisation, Learning and Abstraction (CL)</option>
+                        <option value="MCr">Identifying Relevant Information (MCr)</option>
+                        <option value="MCt">Critical Thinking Processes (MCt)</option>
+                        <option value="MCu">Calibrating Knowns and Unknowns (MCu)</option>
+                        <option value="MS">Mind Modelling and Social Cognition (MS)</option>
+                        <option value="QLl">Logical Reasoning (QLl)</option>
+                        <option value="QLq">Quantitative Reasoning (QLq)</option>
+                        <option value="SNs">Spatio-physical Reasoning (SNs)</option>
+                        <option value="KNa">Knowledge of Applied Sciences (KNa)</option>
+                        <option value="KNc">Customary Everyday Knowledge (KNc)</option>
+                        <option value="KNf">Knowledge of Formal Sciences (KNf)</option>
+                        <option value="KNn">Knowledge of Natural Sciences (KNn)</option>
+                        <option value="KNs">Knowledge of Social Sciences (KNs)</option>
+                        <option value="AT">Atypicality (AT)</option>
+                        <option value="VO">Volume (VO)</option>
+                    </select>
+                </div>
+
+                <div id="dimension-rubrics" style="margin-top: 1rem;">
+                    <div class="rubric" id="AS" style="display: none;">
+                        <div class="tcolorbox">
+                            <div class="tcolorbox-title">Attention and Scan (AS)</div>
+                            <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This criterion assesses the level of attention and scan required to focus on or locate specific elements within a given stream of information or environment in the whole process of solving a task. During this process, there is the need to actively scan for or retrieve elements that meet predetermined criteria. The level represents the extent to which the task requires locating and focusing on specific target information, ranging from situations where the target is immediately obvious to those requiring sustained tracking of multiple targets among numerous distractors—any elements that are irrelevant to solve the task, such as visual objects, sounds, pieces of text, noise, or other stimuli, but compete for attention with the target information—in complex, dynamic environments. The challenge is not on determining what to look for but focusing the attention to find it within a larger context. This differs from tasks where there's a need to identify which pieces of information are relevant from a set already under consideration. While both processes may overlap in complex tasks like reading comprehension or image understanding, “attention and scan” specifically focuses on the deployment of attention during scan processes when solving the task, rather than the selection or evaluation of information.
+      </span>
+                            </div>
+                        </div>
+
+                        <!-- Second tcolorbox: Levels -->
+                        <div class="tcolorbox">
+                            <div class="tcolorbox-title">Levels</div>
+                            <div class="tcolorbox-body">
+                                <ol class="levels" start="0">
+                                    <li data-label="Level 0">
+          <span style="font-family: sans-serif;">
+            <strong>None.</strong> No attention or scan is required. The target information is immediately obvious or is the only information present. <strong>Examples:</strong>
+          </span>
+                                        <ul>
+                                            <li><span style="font-family: sans-serif;">"Given a single word input, determine if it starts with a capital letter."</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">"Look at the only object in the centre of the white page and tell what colour it is."</span>
+                                            </li>
+                                            <li><span
+                                                    style="font-family: sans-serif;">"Is Madrid the capital of Spain?"</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-label="Level 1">
+          <span style="font-family: sans-serif;">
+            <strong>Very low.</strong> Minimal attention or scanning is required. The target information is easily distinguishable with little to almost no distraction. <strong>Examples:</strong>
+          </span>
+                                        <ul>
+                                            <li><span style="font-family: sans-serif;">"Find the only blue car in a car park full of red cars."</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">"Find the letter 'X' among a row of 'O's"</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">"Spot the tall tree in a row of short bushes."</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-label="Level 2">
+          <span style="font-family: sans-serif;">
+            <strong>Low.</strong> Some attention or basic scanning is required. The target information is visible among a few distractors or in a small scan area. <strong>Examples:</strong>
+          </span>
+                                        <ul>
+                                            <li><span style="font-family: sans-serif;">"Find all the vowels in the following sentence: 'The quick brown fox jumps over the lazy dog.'"</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">"Find who's wearing glasses in this photo of students at commencement, with 2 rows of 5 students each, all facing forward, taken by a professional photographer."</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">
+              "Who authored the Queensberry rules, which were published in 1867 for the sport of boxing? Choices: A. John Douglas (in his late twenties)<br>
+              B. John Graham Chambers (in his mid-twenties)<br>
+              C. Marquess of Queensberry (in his early thirties)<br>
+              D. James Figg (in his forties)."
+            </span></li>
+                                        </ul>
+                                    </li>
+                                    <li data-label="Level 3">
+          <span style="font-family: sans-serif;">
+            <strong>Intermediate.</strong> Moderate attention and scan are required. The target information is mixed with several distractors or spread over a fairly large scan area. <strong>Examples:</strong>
+          </span>
+                                        <ul>
+                                            <li><span style="font-family: sans-serif;">"Find everyone wearing glasses in this casual BBQ photo where 15 people are gathered around a table. Some are sitting, some standing, some looking at the camera while others are in conversation."</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">"In a 5-page technical document about basic geometry, locate all explicit references to the Pythagorean theorem (a² + b² = c²), where the equation appears 5 times mixed among references to 15 other geometric formulas, with occasional inconsistent equation numbering but standard mathematical notation."</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">
+              "As we all know, the Queensberry Rules are a set of rules for boxing that govern both amateur and professional matches. Who authored the Queensberry rules, which were published in 1867 for the sport of boxing? Choices: A. John Douglas (in his late twenties)<br>
+              B. John Graham Chambers (in his mid-twenties)<br>
+              C. Marquess of Queensberry (in his early thirties)<br>
+              D. James Figg (in his forties)<br>
+              E. James Zou (in his fifties)<br>
+              F. Lucy Grande (in her late twenties)<br>
+              G. Xiaoxiao Li (in her early forties)<br>
+              H. Enrique Garcia (in his late thirties)."
+            </span></li>
+                                        </ul>
+                                    </li>
+                                    <li data-label="Level 4">
+          <span style="font-family: sans-serif;">
+            <strong>High.</strong> Sustained tracking of one or various targets is required. The target information is in an environment mixed with numerous distractors and changing conditions, requiring some continuous monitoring amid competing signals. <strong>Examples:</strong>
+          </span>
+                                        <ul>
+                                            <li><span style="font-family: sans-serif;">"Listening to a symphony, identify all instances where the clarinet plays in a minor key, even when it's not playing the main melody."</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">"Track three orange spheres among twenty red spheres as they move randomly across a black screen (40 cm × 30 cm) at varying speeds (1-3 cm/s), with spheres frequently intersecting paths and maintaining a minimum separation distance of 2 cm. Each sphere is 1 cm in diameter."</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">"In a real-time video feed of a busy airport, finding the locations of ten blue suitcases."</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-label="Level 5+">
+          <span style="font-family: sans-serif; color: var(--mytitleAS);">
+            <strong>Level 5+</strong> <strong>Very High.</strong> Requires sustained attention and scan for simultaneous tracking of multiple targets across different domains or contexts, with continuous adaptation to fast-changing conditions. The target information is extremely difficult to distinguish from distractors or is hidden in a vast or constantly changing environment. <strong>Examples:</strong>
+          </span>
+                                        <ul>
+                                            <li><span style="font-family: sans-serif;">"While seated courtside at a professional basketball game, track two specific players throughout the entire game as they move at speeds up to 8m/s, frequently cluster with other players during rebounds, and weave through screens and defensive formations."</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">"Monitor four simultaneous video feeds of a crowded airport terminal from different angles, detecting subtle security-relevant changes (e.g. brief interactions &lt; 2 seconds, crowd flow changes, small object exchanges) across feeds."</span>
+                                            </li>
+                                            <li><span style="font-family: sans-serif;">"While monitoring multiple simultaneous customer service chat conversations in different languages, identify instances where customers are expressing the same underlying technical issue, even though they're describing it using different metaphors, technical terms, or cultural references specific to their region."</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rubric" id="CEc" style="display: none;">
+                        <h3>Rubric for Verbal Comprehension (CEc)</h3>
+                        <p>[Rubric details for Verbal Comprehension]</p>
+                    </div>
+                    <div class="rubric" id="CEe" style="display: none;">
+                        <h3>Rubric for Verbal Expression (CEe)</h3>
+                        <p>[Rubric details for Verbal Expression]</p>
+                    </div>
+                    <div class="rubric" id="CL" style="display: none;">
+                        <h3>Rubric for Conceptualisation, Learning and Abstraction (CL)</h3>
+                        <p>[Rubric details for Conceptualisation, Learning and Abstraction]</p>
+                    </div>
+                    <div class="rubric" id="MCr" style="display: none;">
+                        <h3>Rubric for Identifying Relevant Information (MCr)</h3>
+                        <p>[Rubric details for Identifying Relevant Information]</p>
+                    </div>
+                    <div class="rubric" id="MCt" style="display: none;">
+                        <h3>Rubric for Critical Thinking Processes (MCt)</h3>
+                        <p>[Rubric details for Critical Thinking Processes]</p>
+                    </div>
+                    <div class="rubric" id="MCu" style="display: none;">
+                        <h3>Rubric for Calibrating Knowns and Unknowns (MCu)</h3>
+                        <p>[Rubric details for Calibrating Knowns and Unknowns]</p>
+                    </div>
+                    <div class="rubric" id="MS" style="display: none;">
+                        <h3>Rubric for Mind Modelling and Social Cognition (MS)</h3>
+                        <p>[Rubric details for Mind Modelling and Social Cognition]</p>
+                    </div>
+                    <div class="rubric" id="QLl" style="display: none;">
+                        <h3>Rubric for Logical Reasoning (QLl)</h3>
+                        <p>[Rubric details for Logical Reasoning]</p>
+                    </div>
+                    <div class="rubric" id="QLq" style="display: none;">
+                        <h3>Rubric for Quantitative Reasoning (QLq)</h3>
+                        <p>[Rubric details for Quantitative Reasoning]</p>
+                    </div>
+                    <div class="rubric" id="SNs" style="display: none;">
+                        <h3>Rubric for Spatio-physical Reasoning (SNs)</h3>
+                        <p>[Rubric details for Spatio-physical Reasoning]</p>
+                    </div>
+                    <div class="rubric" id="KNa" style="display: none;">
+                        <h3>Rubric for Knowledge of Applied Sciences (KNa)</h3>
+                        <p>[Rubric details for Knowledge of Applied Sciences]</p>
+                    </div>
+                    <div class="rubric" id="KNc" style="display: none;">
+                        <h3>Rubric for Customary Everyday Knowledge (KNc)</h3>
+                        <p>[Rubric details for Customary Everyday Knowledge]</p>
+                    </div>
+                    <div class="rubric" id="KNf" style="display: none;">
+                        <h3>Rubric for Knowledge of Formal Sciences (KNf)</h3>
+                        <p>[Rubric details for Knowledge of Formal Sciences]</p>
+                    </div>
+                    <div class="rubric" id="KNn" style="display: none;">
+                        <h3>Rubric for Knowledge of Natural Sciences (KNn)</h3>
+                        <p>[Rubric details for Knowledge of Natural Sciences]</p>
+                    </div>
+                    <div class="rubric" id="KNs" style="display: none;">
+                        <h3>Rubric for Knowledge of Social Sciences (KNs)</h3>
+                        <p>[Rubric details for Knowledge of Social Sciences]</p>
+                    </div>
+                    <div class="rubric" id="AT" style="display: none;">
+                        <h3>Rubric for Atypicality (AT)</h3>
+                        <p>[Rubric details for Atypicality]</p>
+                    </div>
+                    <div class="rubric" id="VO" style="display: none;">
+                        <h3>Rubric for Volume (VO)</h3>
+                        <p>[Rubric details for Volume]</p>
+                    </div>
+                </div>
+
+                <script>
+                    // When the user selects a dimension, show only the matching rubric section.
+                    const selector = document.getElementById('dimension-selector');
+                    selector.addEventListener('change', function () {
+                        const rubrics = document.querySelectorAll('.rubric');
+                        rubrics.forEach(rubric => rubric.style.display = 'none');
+                        const selected = this.value;
+                        if (selected) {
+                            const target = document.getElementById(selected);
+                            if (target) {
+                                target.style.display = 'block';
+                            }
+                        }
+                    });
+                </script>
+
+            </div>
         </div>
     </div>
 </section>
 
+
 <section class="section hero">
     <div class="hero-body">
-        <div class="container">
+        <div class="container is-max-desktop">
             <h1 class="title is-3 has-text-centered">The ADeLe battery<br></h1>
-            <div class="content has-text-justified">
-                <div class="subtitle is-5">
-                    <br>
-                </div>
-
+            <div class="content has-text-centered">
+                <p>
+                    The ADeLe battery is obtained by running the DeLeAn rubrics on 63 tasks from 20 benchmarks, shown
+                    below. Only a subset of instances from each task was included in the benchmark (see the original
+                    paper for details).
+                </p>
             </div>
 
+
+            <div class="table-container is-max-desktop">
+                <table style="border-collapse: collapse; width: 80%; font-family: sans-serif; text-align: center; margin: 0 auto; font-size: 0.9rem;">
+                    <thead>
+                    <tr style="border-top: 2px solid black; border-bottom: 2px solid black;">
+                        <th>Source</th>
+                        <th>Benchmark</th>
+                        <th>Task</th>
+                        <th>#Instances</th>
+                    </tr>
+                    <tr style="border-top: 2px solid black;"></tr>
+                    </thead>
+
+                    <!-- Block 1: AGIEval -->
+                    <tbody>
+                    <tr>
+                        <td rowspan="7">AGIEval</td>
+                        <td>Civil Service Examination</td>
+                        <td>LogiQA-en</td>
+                        <td>408</td>
+                    </tr>
+                    <tr>
+                        <td>GRE &amp; GMAT</td>
+                        <td>AQuA-RAT</td>
+                        <td>203</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">LSAT</td>
+                        <td>LSAT-AR</td>
+                        <td>187</td>
+                    </tr>
+                    <tr>
+                        <td>LSAT-LR</td>
+                        <td>470</td>
+                    </tr>
+                    <tr>
+                        <td>LSAT-RC</td>
+                        <td>253</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">SAT</td>
+                        <td>SAT-En</td>
+                        <td>196</td>
+                    </tr>
+                    <tr>
+                        <td>SAT-Math</td>
+                        <td>214</td>
+                    </tr>
+                    </tbody>
+
+                    <!-- Block 2: ChemLLMBench -->
+                    <tbody style="border-top: 1px solid black;">
+                    <tr>
+                        <td rowspan="5">ChemLLMBench</td>
+                        <td rowspan="5">ChemLLMBench</td>
+                        <td>Molecule Captioning</td>
+                        <td>160</td>
+                    </tr>
+                    <tr>
+                        <td>Molecule Design</td>
+                        <td>295</td>
+                    </tr>
+                    <tr>
+                        <td>Name Prediction</td>
+                        <td>476</td>
+                    </tr>
+                    <tr>
+                        <td>Reaction Prediction</td>
+                        <td>412</td>
+                    </tr>
+                    <tr>
+                        <td>Retrosynthesis</td>
+                        <td>380</td>
+                    </tr>
+                    </tbody>
+
+                    <!-- Block 3: LiveBench -->
+                    <tbody style="border-top: 1px solid black;">
+                    <tr>
+                        <td rowspan="7">LiveBench</td>
+                        <td>Data Analysis</td>
+                        <td>CTA</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>Language</td>
+                        <td>Connections</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Math</td>
+                        <td>AMPS Hard</td>
+                        <td>69</td>
+                    </tr>
+                    <tr>
+                        <td>Math Competition</td>
+                        <td>78</td>
+                    </tr>
+                    <tr>
+                        <td>Olympiad</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Reasoning</td>
+                        <td>Spatial</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>Zebra Puzzle</td>
+                        <td>22</td>
+                    </tr>
+                    </tbody>
+
+                    <!-- Block 4: MMLU-Pro -->
+                    <tbody style="border-top: 1px solid black;">
+                    <tr>
+                        <td rowspan="14">MMLU-Pro</td>
+                        <td rowspan="14">MMLU-Pro</td>
+                        <td>Biology</td>
+                        <td>447</td>
+                    </tr>
+                    <tr>
+                        <td>Business</td>
+                        <td>410</td>
+                    </tr>
+                    <tr>
+                        <td>Chemistry</td>
+                        <td>368</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>345</td>
+                    </tr>
+                    <tr>
+                        <td>Economics</td>
+                        <td>428</td>
+                    </tr>
+                    <tr>
+                        <td>Engineering</td>
+                        <td>296</td>
+                    </tr>
+                    <tr>
+                        <td>Health</td>
+                        <td>411</td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>304</td>
+                    </tr>
+                    <tr>
+                        <td>Law</td>
+                        <td>362</td>
+                    </tr>
+                    <tr>
+                        <td>Math</td>
+                        <td>425</td>
+                    </tr>
+                    <tr>
+                        <td>Other</td>
+                        <td>429</td>
+                    </tr>
+                    <tr>
+                        <td>Philosophy</td>
+                        <td>402</td>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>377</td>
+                    </tr>
+                    <tr>
+                        <td>Psychology</td>
+                        <td>427</td>
+                    </tr>
+                    </tbody>
+
+                    <!-- Block 5: MedCalcBench -->
+                    <tbody style="border-top: 1px solid black;">
+                    <tr>
+                        <td rowspan="7">MedCalcBench</td>
+                        <td rowspan="7">MedCalcBench</td>
+                        <td>Date</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>Diagnosis</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Dosage</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Lab</td>
+                        <td>180</td>
+                    </tr>
+                    <tr>
+                        <td>Physical</td>
+                        <td>214</td>
+                    </tr>
+                    <tr>
+                        <td>Risk</td>
+                        <td>84</td>
+                    </tr>
+                    <tr>
+                        <td>Severity</td>
+                        <td>17</td>
+                    </tr>
+                    </tbody>
+
+                    <!-- Block 6: OmniMath -->
+                    <tbody style="border-top: 1px solid black;">
+                    <tr>
+                        <td rowspan="7">OmniMath</td>
+                        <td rowspan="7">OmniMath</td>
+                        <td>Algebra</td>
+                        <td>337</td>
+                    </tr>
+                    <tr>
+                        <td>Applied Mathematics</td>
+                        <td>302</td>
+                    </tr>
+                    <tr>
+                        <td>Calculus</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Discrete Mathematics</td>
+                        <td>314</td>
+                    </tr>
+                    <tr>
+                        <td>Geometry</td>
+                        <td>329</td>
+                    </tr>
+                    <tr>
+                        <td>Number Theory</td>
+                        <td>322</td>
+                    </tr>
+                    <tr>
+                        <td>Precalculus</td>
+                        <td>30</td>
+                    </tr>
+                    </tbody>
+
+                    <!-- Block 7: SciBench -->
+                    <tbody style="border-top: 1px solid black;">
+                    <tr>
+                        <td rowspan="3">SciBench</td>
+                        <td rowspan="3">SciBench</td>
+                        <td>Chemistry</td>
+                        <td>142</td>
+                    </tr>
+                    <tr>
+                        <td>Math</td>
+                        <td>105</td>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>108</td>
+                    </tr>
+                    </tbody>
+
+                    <!-- Block 8: TimeBench -->
+                    <tbody style="border-top: 1px solid black;">
+                    <tr>
+                        <td rowspan="10">TimeBench</td>
+                        <td>Date Arithmetic</td>
+                        <td>Date Arithmetic</td>
+                        <td>493</td>
+                    </tr>
+                    <tr>
+                        <td>MCTACO</td>
+                        <td>MCTACO</td>
+                        <td>205</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">MenatQA</td>
+                        <td>MenatQA-Counterfactual</td>
+                        <td>130</td>
+                    </tr>
+                    <tr>
+                        <td>MenatQA-Order</td>
+                        <td>157</td>
+                    </tr>
+                    <tr>
+                        <td>MenatQA-Scope</td>
+                        <td>393</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">TempReason</td>
+                        <td>TempReason-L2</td>
+                        <td>318</td>
+                    </tr>
+                    <tr>
+                        <td>TempReason-L3</td>
+                        <td>339</td>
+                    </tr>
+                    <tr>
+                        <td>TimeDial</td>
+                        <td>TimeDial</td>
+                        <td>340</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">TimeQA</td>
+                        <td>TimeQA-explicit</td>
+                        <td>379</td>
+                    </tr>
+                    <tr>
+                        <td>TimeQA-implicit</td>
+                        <td>348</td>
+                    </tr>
+                    </tbody>
+
+                    <!-- Block 9: TruthQuest -->
+                    <tbody style="border-top: 1px solid black;">
+                    <tr>
+                        <td rowspan="3">TruthQuest</td>
+                        <td rowspan="3">TruthQuest</td>
+                        <td>E</td>
+                        <td>344</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>371</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>340</td>
+                    </tr>
+                    </tbody>
+
+                    <!-- Final bottom rule -->
+                    <tbody>
+                    <tr style="border-top: 2px solid black;">
+                        <td colspan="4"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content has-text-justified">
+                <p>
+                    <br>
+                </p>
+            </div>
 
             <div class="container">
                 <div class="item" style="text-align: center; margin-bottom: 4rem;">
                     <h1 class="title is-4 has-text-centered">
-                        <b>Profiling benchmark demands</b>
+                        <b>Demand distribution of ADeLe: what do the benchmarks really test for?</b>
                     </h1>
-                    <img src="static/images/optimized_svgs/demand_distribution_polar.svg"
-                         alt="Demands on the overall collection ADELE"
-                         style="width: 45%; object-fit: contain; margin: 0 auto 20px auto;"/>
                     <div class="content has-text-justified">
                         <p>
-                            TEXT
+                            The annotations obtained with the DeLeAn rubrics allow to identify what demands the
+                            benchmarks composing ADeLe are loaded on. The following image (from the original paper)
+                            shows the overall distribution of demands on the ADeLe battery.
                         </p>
                     </div>
+
+
+                    <img src="static/images/optimized_svgs/demand_distribution_polar.svg"
+                         alt="Demands on the overall collection ADELE"
+                         style="width: 65%; object-fit: contain; margin: 0 auto 20px auto;"/>
                 </div>
 
                 <div class="columns is-centered">
@@ -523,34 +1170,44 @@
                         <h1 class="title is-4 has-text-centered">
                             <b>Demands for each of the benchmarks</b>
                         </h1>
+                        <div class="content has-text-centered">
+                            <p>
+                                Below, you can see the demand distribution for each of the 20 benchmarks in the ADeLe
+                                battery separately (from the original paper).
+                            </p>
+                        </div>
+
                         <details>
                             <summary style="cursor: pointer">Expand
                             </summary>
                             <img src="static/images/optimized_svgs/benchmark_demand_profiles.svg"
                                  alt="Demands for each of the benchmarks"
                                  style="width: 100%; object-fit: contain; margin: 0 auto 20px auto;"/>
-                            <div class="content has-text-justified">
-                                <p>
-                                    TEXT
-                                </p>
-                            </div>
                         </details>
+                        <div class="content has-text-centered">
+                            <p>
+                                <br>
+                            </p>
+                        </div>
 
 
                         <h1 class="title is-4 has-text-centered">
-                            <b>Correlation across demands in the ADELE collection</b>
+                            <b>Correlation across demands in the ADeLe collection</b>
                         </h1>
+                        <div class="content has-text-justified">
+                            <p>
+                                The annotations obtained with the DeLeAn rubrics also allow to identify what demands
+                                are correlated with one another, which is important to understand what benchmarks really
+                                measure. The plot below shows correlation values (from the original paper).
+                            </p>
+                        </div>
+
                         <details>
                             <summary style="cursor: pointer">Expand
                             </summary>
                             <img src="static/images/optimized_svgs/demand_correlation.svg"
                                  alt="Correlation across demands in the ADELE collection"
-                                 style="width: 50%; object-fit: contain; margin: 0 auto 20px auto;"/>
-                            <div class="content has-text-justified">
-                                <p>
-                                    TEXT
-                                </p>
-                            </div>
+                                 style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
                         </details>
 
 
@@ -567,84 +1224,218 @@
 
 <section class="section hero is-light">
     <div class="hero-body">
-        <div class="container">
+        <div class="container is-max-desktop">
             <h1 class="title is-3 has-text-centered">Profiling LLM capabilities</h1>
             <div class="content has-text-justified">
-                <div class="subtitle is-6">
-                    some text
-                </div>
-
-            </div>
-
-            <h1 class="title is-4 has-text-centered">Characteristic curves: slicing the demand-ability
-                space</h1>
-            <div class="content has-text-justified">
-                <div class="subtitle is-6">
-                    some text
-                </div>
-
-                <div style="text-align: center;">
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 5px;">
-                        <img src="static/images/optimized_svgs/SCC_llama3d1-405b_KNn.svg"
-                             alt="Characteristic curve"
-                             style="width: 45%;">
-                    </div>
-                </div>
-                <p style="margin-top: 1rem;">
-                    Characteristic curve
+                <p>
+                    By testing a LLM on the ADeLe benchmark, an ability "profile" can be extracted, representing an
+                    ability
+                    level for each considered dimension. The plot below
+                    shows the profile of the LLMs considered in the original paper.
                 </p>
-            </div>
-        </div>
 
-        <div class="columns is-centered">
-            <div class="column has-text-centered">
-
-                <h1 class="title is-4 has-text-centered">
-                    <b>Characteristic curves for all considered LLMs and demands</b>
-                </h1>
-                <details>
-                    <summary style="cursor: pointer">
-                        <em>Expand</em>
-                    </summary>
-                    <img src="static/images/optimized_svgs/Combined_SCCs_MaxAuxDiff=0_DupThresh=100.svg"
-                         alt="Characteristic curves for all considered LLMs and demands"
-                         style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
-                    <div class="content has-text-justified">
-                        <p>
-                            TEXT
-                        </p>
-                    </div>
-                </details>
-
-
-            </div>
-        </div>
-
-        <div class="container">
-            <h1 class="title is-4 has-text-centered">Profiles of the considered LLMs</h1>
-            <div class="content has-text-justified">
-                <div class="subtitle is-6">
-                    some text
-                </div>
 
                 <div style="text-align: center;">
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 5px;">
                         <img src="static/images/optimized_svgs/capability_radar_plot_MaxAuxDiff=0_DubThresh=100.svg"
                              alt="Profiles of the considered LLMs"
-                             style="width: 90%;">
+                             style="width: 100%;">
                     </div>
                 </div>
-                <p style="margin-top: 1rem;">
-                    Profiles
+
+
+                <h1 class="title is-4 has-text-centered">How are profiles obtained?</h1>
+                <p>
+                    From the annotated ADeLe battery and the instance-level results of a LLM, the ability value for
+                    each dimension is obtained by:
+                <ol>
+                    <li> plotting the success probability
+                        of the
+                        LLM at increasing demand levels (<em>characteristic curve</em>).
+                        A dominant strategy is used to remove confounders:
+                        at any demand level, only instances of ADeLe where
+                        all other dimensions have demand lower than that of the considered dimension are kept.
+                    </li>
+                    <li>
+                        The ability score is then defined as the x-value where a logistic fit is at 0.5.
+                    </li>
+                </ol>
+                See the image below (from the original paper) for a visualization.
                 </p>
+
+                <div style="text-align: center;">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 5px;">
+                        <img src="static/images/SCC.png"
+                             alt="Characteristic curve"
+                             style="width: 55%;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+                <p><br></p>
+                <h1 class="title is-4 has-text-centered">
+                    <b>Characteristic curves for all considered LLMs and demands</b>
+                </h1>
+                <div class="content has-text-centered">
+                    <p>
+                        Below, you can see the characteristic curves for all considered demands and LLMs from the
+                        original paper.
+                    </p>
+                </div>
+
+                <div id="LLM-selector-container" style="text-align: center; margin-top: 2rem;">
+                    <label for="LLM-selector"><strong>Select an LLM:</strong></label>
+                    <select id="LLM-selector" style="margin-left: 0.5rem;">
+                        <option value="" selected>-- Choose an LLM --</option>
+                        <option value="all">All LLMs together</option>
+                        <option value="babbage-002">babbage-002</option>
+                        <option value="davinci-002">davinci-002</option>
+                        <option value="DK-R1-Dist-Qwen-1.5B">DK-R1-Dist-Qwen-1.5B</option>
+                        <option value="DK-R1-Dist-Qwen-7B">DK-R1-Dist-Qwen-7B</option>
+                        <option value="DK-R1-Dist-Qwen-14B">DK-R1-Dist-Qwen-14B</option>
+                        <option value="DK-R1-Dist-Qwen-32B">DK-R1-Dist-Qwen-32B</option>
+                        <option value="gpt-35-turbo">gpt-35-turbo</option>
+                        <option value="gpt4o">gpt4o</option>
+                        <option value="llama3d1-405b">llama3d1-405b</option>
+                        <option value="llama3d2-1b">llama3d2-1b</option>
+                        <option value="llama3d2-3b">llama3d2-3b</option>
+                        <option value="llama3d2-11b">llama3d2-11b</option>
+                        <option value="llama3d2-90b">llama3d2-90b</option>
+                        <option value="o1_re=low">o1_re=low</option>
+                        <option value="o1-mini">o1-mini</option>
+                    </select>
+                </div>
+
+                <div id="LLM-rubrics" style="margin-top: 1rem;">
+                    <div class="LLM" id="all" style="display: none;">
+                        <img src="static/images/optimized_svgs/Combined_SCCs_MaxAuxDiff=0_DupThresh=100.svg"
+                             alt="Characteristic curves for all considered LLMs and demands"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="babbage-002" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=babbage-002_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for babbage-002"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="davinci-002" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=davinci-002_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for davinci-002"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="DK-R1-Dist-Qwen-1.5B" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=DK-R1-Dist-Qwen-1.5B_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for DK-R1-Dist-Qwen-1.5B"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="DK-R1-Dist-Qwen-7B" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=DK-R1-Dist-Qwen-7B_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for DK-R1-Dist-Qwen-7B"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="DK-R1-Dist-Qwen-14B" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=DK-R1-Dist-Qwen-14B_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for DK-R1-Dist-Qwen-14B"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="DK-R1-Dist-Qwen-32B" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=DK-R1-Dist-Qwen-32B_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for DK-R1-Dist-Qwen-32B"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="gpt-35-turbo" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=gpt-35-turbo_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for gpt-35-turbo"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="gpt4o" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=gpt4o_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for gpt4o"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="llama3d1-405b" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=llama3d1-405b_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for llama3d1-405b"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="llama3d2-1b" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=llama3d2-1b_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for llama3d2-1b"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="llama3d2-3b" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=llama3d2-3b_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for llama3d2-3b"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="llama3d2-11b" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=llama3d2-11b_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for llama3d2-11b"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="llama3d2-90b" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=llama3d2-90b_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for llama3d2-90b"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="o1_re=low" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=o1_re=low_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for o1_re=low"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                    <div class="LLM" id="o1-mini" style="display: none;">
+                        <img src="static/images/optimized_svgs/SCCs_subject=o1-mini_MaxAuxDiff=0.svg"
+                             alt="Characteristic curves for o1-mini"
+                             style="width: 80%; object-fit: contain; margin: 0 auto 20px auto;"/>
+                    </div>
+                </div>
+
+                <script>
+                    document.getElementById('LLM-selector').addEventListener('change', function () {
+                        var selectedValue = this.value;
+                        // Hide all LLM containers.
+                        var llmContainers = document.querySelectorAll('.LLM');
+                        llmContainers.forEach(function (container) {
+                            container.style.display = 'none';
+                        });
+                        // If a valid option is selected, display its container.
+                        if (selectedValue !== "") {
+                            var selectedContainer = document.getElementById(selectedValue);
+                            if (selectedContainer) {
+                                selectedContainer.style.display = 'block';
+                            }
+                        }
+                    });
+                </script>
 
 
             </div>
         </div>
+
+
     </div>
 </section>
-<!-- End youtube video -->
 
+
+<section class="section">
+        <div class="container is-max-desktop content">
+            <h1 class="title is-3">How to contribute</h1>
+            <div class="content has-text-justified">
+                <p> You can contribute by:
+                <ul>
+                    <li>Using the battery or the rubrics, and report your results with them.</li>
+                    <li>Extending the battery by applying the rubrics to your preferred or new benchmarks.</li>
+                    <li>Extending the rubrics by adding more levels or dimensions.</li>
+                </ul>
+                We are working on easy ways to contribute directly. In the meanwhile, please get in touch at:
+                jh2135 AT cam.ac.uk if you want to contribute.
+                </p>
+            </div>
+        </div>
+</section>
 
 <!--BibTex citation -->
 <section class="section" id="BibTeX">
@@ -696,4 +1487,6 @@
 <!-- End of Statcounter Code -->
 
 </body>
+
+
 </html>
