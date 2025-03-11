@@ -28,7 +28,7 @@ def parse_text(input_text):
         if not stripped:
             continue
         # When we hit a line starting with "Level" we leave the intro section.
-        if in_intro and (re.match(r'^Level \d+{:\.}', stripped) or re.match(r'^Level \d+\.', stripped)):
+        if in_intro and re.match(r'^Level \d+[:.]', stripped):
             in_intro = False
 
         if in_intro:
@@ -39,7 +39,7 @@ def parse_text(input_text):
                 intro_lines.append(stripped)
         else:
             # Build level blocks. Each new "Level" line signals a new block.
-            if (re.match(r'^Level \d+:', stripped) or re.match(r'^Level \d+\.', stripped)) and current_block:
+            if re.match(r'^Level \d+[:.]', stripped) and current_block:
                 level_blocks.append("\n".join(current_block))
                 current_block = [stripped]
             else:
