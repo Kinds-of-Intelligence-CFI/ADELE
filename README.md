@@ -1,3 +1,11 @@
+# Important!
+How to edit the website: 
+1. edit the template in `templates/index.html`; this ensures that the HTML for the rubrics is included correctly! 
+2. render the template by running `python render.py` (this requires the `jinjia` package), which creates a fresh `index.html` in the root
+3. Commit both the amended template and the rendered `index.py` (as the latter is what is used for the actual website)
+
+
+
 # Academic Project Page Template
 This is an academic paper project page template.
 

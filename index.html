@@ -93,23 +93,11 @@
             --mybgcolor2: #edf6f9;
             --mybg: #f1f2f6;
             --mytitle: #758bfd;
-            --mybg2: #ffffff;
             --primordial: #d1495b;
-            --mytitleAS: #d1495b;
-            --mytitleCE: #d1495b;
-            --mytitleCL: #d1495b;
-            --mytitleMC: #d1495b;
-            --mytitleMS: #d1495b;
-            --mytitleQL: #d1495b;
-            --mytitleSN: #d1495b;
             --knowledge: #00798c;
-            --mytitleKN: #00798c;
             --others: #30638e;
-            --mytitleVO: #30638e;
-            --mytitleAT: #30638e;
             --nd: #edae49;
-            --mytitleUG: #edae49;
-            --RQ: #456990;
+            --mybg2: #ffffff;
             --darkblue: rgb(0, 0, 139);
             --darkred: rgb(139, 0, 0);
             --darkgreen: rgb(0, 139, 0);
@@ -127,7 +115,6 @@
 
         .tcolorbox {
             background-color: var(--mybg);
-            border: 1px solid var(--mytitleAS);
             border-radius: 3px; /* approximates 1mm */
             padding: 4pt 6pt 4pt 4pt;
             margin: 10px 0;
@@ -135,7 +122,6 @@
 
         /* Ensure the title is left-aligned */
         .tcolorbox-title {
-            background-color: var(--mytitleAS);
             color: white;
             font-family: sans-serif;
             font-size: small;
@@ -161,7 +147,6 @@
         ol.levels > li::before {
             content: attr(data-label);
             font-weight: bold;
-            color: var(--mytitleAS);
             margin-right: 4px;
         }
 
@@ -587,182 +572,1018 @@
 
                 <div id="dimension-rubrics" style="margin-top: 1rem;">
                     <div class="rubric" id="AS" style="display: none;">
-                        <div class="tcolorbox">
-                            <div class="tcolorbox-title">Attention and Scan (AS)</div>
-                            <div class="tcolorbox-body">
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">﻿Attention and Scan (AS)</div>
+    <div class="tcolorbox-body">
       <span style="font-family: sans-serif;">
-        This criterion assesses the level of attention and scan required to focus on or locate specific elements within a given stream of information or environment in the whole process of solving a task. During this process, there is the need to actively scan for or retrieve elements that meet predetermined criteria. The level represents the extent to which the task requires locating and focusing on specific target information, ranging from situations where the target is immediately obvious to those requiring sustained tracking of multiple targets among numerous distractors—any elements that are irrelevant to solve the task, such as visual objects, sounds, pieces of text, noise, or other stimuli, but compete for attention with the target information—in complex, dynamic environments. The challenge is not on determining what to look for but focusing the attention to find it within a larger context. This differs from tasks where there's a need to identify which pieces of information are relevant from a set already under consideration. While both processes may overlap in complex tasks like reading comprehension or image understanding, “attention and scan” specifically focuses on the deployment of attention during scan processes when solving the task, rather than the selection or evaluation of information.
+        This criterion assesses the level of attention and scan required to focus on or locate specific elements within a given stream of information or environment in the whole process of solving a task. During this process, there is the need to actively scan for or retrieve elements that meet predetermined criteria. The level represents the extent to which the task requires locating and focusing on specific target information, ranging from situations where the target is immediately obvious to those requiring sustained tracking of multiple targets among numerous distractors—any elements that are irrelevant to solve the task, such as visual objects, sounds, pieces of text, noise, or other stimuli, but compete for attention with the target information—in complex, dynamic environments. The challenge is not on determining what to look for but focusing the attention to find it within a larger context. This differs from tasks where there&#x27;s a need to identify which pieces of information are relevant from a set already under consideration. While both processes may overlap in complex tasks like reading comprehension or image understanding, “attention and scan” specifically focuses on the deployment of attention during scan processes when solving the task, rather than the selection or evaluation of information.
+Level 0: None. No attention or scan is required. The target information is immediately obvious or is the only information present.
+Examples:
+* &quot;Given a single word input, determine if it starts with a capital letter.&quot;
+* &quot;Look at the only object in the centre of the white page and tell what colour it is.&quot;
+* &quot;Is Madrid the capital of Spain?&quot;
+Level 1: Very low. Minimal attention or scanning is required. The target information is easily distinguishable with little to almost no distraction.
+Examples:
+* &quot;Find the only blue car in a car park full of red cars.&quot;
+* &quot;Find the letter &#x27;X&#x27; among a row of &#x27;O&#x27;s&quot;
+* &quot;Spot the tall tree in a row of short bushes.&quot;
+Level 2: Low. Some attention or basic scanning is required. The target information is visible among a few distractors or in a small scan area.
+Examples:
+* &quot;Find all the vowels in the following sentence: &#x27;The quick brown fox jumps over the lazy dog.&#x27;&quot;
+* &quot;Find who&#x27;s wearing glasses in this photo of students at commencement, with 2 rows of 5 students each, all facing forward, taken by a professional photographer.&quot;
+* &quot;Who authored the Queensberry rules, which were published in 1867 for the sport of boxing? Choices: A. John Douglas  (in his late twenties)\nB. John Graham Chambers (in his mid-twenties)\nC. Marquess of Queensberry (in his early thirties)\nD. James Figg (in his forties).&quot;
+Level 3: Intermediate. Moderate attention and scan are required. The target information is mixed with several distractors or spread over a fairly large scan area.
+Examples:
+* &quot;Find everyone wearing glasses in this casual BBQ photo where 15 people are gathered around a table. Some are sitting, some standing, some looking at the camera while others are in conversation.&quot;
+* &quot;In a 5-page technical document about basic geometry, locate all explicit references to the Pythagorean theorem (a² + b² = c²), where the equation appears 5 times mixed among references to 15 other geometric formulas, with occasional inconsistent equation numbering but standard mathematical notation.
+* &quot;As we all know, the Queensberry Rules are a set of rules for boxing that govern both amateur and professional matches. Who authored the Queensberry rules, which were published in 1867 for the sport of boxing? Choices: A. John Douglas  (in his late twenties)\nB. John Graham Chambers (in his mid-twenties)\nC. Marquess of Queensberry (in his early thirties)\nD. James Figg (in his forties)\nE. James Zou (in his fifties)\nF. Lucy Grande (in her late twenties)\nG. Xiaoxiao Li (in her early forties)\nH. Enrique Garcia (in his late thirties).&quot;
+Level 4: High. Sustained tracking of one or various targets is required. The target information is in an environment mixed with numerous distractors and changing conditions. requires some continuous monitoring amid competing signals.
+Examples:
+* &quot;Listening to a symphony, identify all instances where the clarinet plays in a minor key, even when it&#x27;s not playing the main melody.
+* &quot;Track three orange spheres among twenty red spheres as they move randomly across a black screen (40 cm × 30 cm) at varying speeds (1-3 cm/s), with spheres frequently intersecting paths and maintaining a minimum separation distance of 2 cm. Each sphere is 1 cm in diameter.&quot;
+* &quot;In a real-time video feed of a busy airport, finding the locations of ten blue suitcases.&quot;
+Level 5: Very high. Requires sustained attention and scan for simultaneous tracking of multiple targets across different domains or contexts, with continuous adaptation to fast-changing conditions. The target information is extremely difficult to distinguish from distractors or is hidden in a vast or constantly changing environment.
+Examples:
+* &quot;While seated courtside at a professional basketball game, track two specific players throughout the entire game as they move at speeds up to 8m/s, frequently cluster with other players during rebounds, and weave through screens and defensive formations.&quot;
+* &quot;Monitor four simultaneous video feeds of a crowded airport terminal from different angles, detecting subtle security-relevant changes (e.g. brief interactions &lt; 2 seconds, crowd flow changes, small object exchanges) across feeds.&quot;
+* &quot;While monitoring multiple simultaneous customer service chat conversations in different languages, identify instances where customers are expressing the same underlying technical issue, even though they&#x27;re describing it using different metaphors, technical terms, or cultural references specific to their region.&quot;
       </span>
-                            </div>
-                        </div>
+    </div>
+</div>
 
-                        <!-- Second tcolorbox: Levels -->
-                        <div class="tcolorbox">
-                            <div class="tcolorbox-title">Levels</div>
-                            <div class="tcolorbox-body">
-                                <ol class="levels" start="0">
-                                    <li data-label="Level 0">
-          <span style="font-family: sans-serif;">
-            <strong>None.</strong> No attention or scan is required. The target information is immediately obvious or is the only information present. <strong>Examples:</strong>
-          </span>
-                                        <ul>
-                                            <li><span style="font-family: sans-serif;">"Given a single word input, determine if it starts with a capital letter."</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">"Look at the only object in the centre of the white page and tell what colour it is."</span>
-                                            </li>
-                                            <li><span
-                                                    style="font-family: sans-serif;">"Is Madrid the capital of Spain?"</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-label="Level 1">
-          <span style="font-family: sans-serif;">
-            <strong>Very low.</strong> Minimal attention or scanning is required. The target information is easily distinguishable with little to almost no distraction. <strong>Examples:</strong>
-          </span>
-                                        <ul>
-                                            <li><span style="font-family: sans-serif;">"Find the only blue car in a car park full of red cars."</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">"Find the letter 'X' among a row of 'O's"</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">"Spot the tall tree in a row of short bushes."</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-label="Level 2">
-          <span style="font-family: sans-serif;">
-            <strong>Low.</strong> Some attention or basic scanning is required. The target information is visible among a few distractors or in a small scan area. <strong>Examples:</strong>
-          </span>
-                                        <ul>
-                                            <li><span style="font-family: sans-serif;">"Find all the vowels in the following sentence: 'The quick brown fox jumps over the lazy dog.'"</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">"Find who's wearing glasses in this photo of students at commencement, with 2 rows of 5 students each, all facing forward, taken by a professional photographer."</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">
-              "Who authored the Queensberry rules, which were published in 1867 for the sport of boxing? Choices: A. John Douglas (in his late twenties)<br>
-              B. John Graham Chambers (in his mid-twenties)<br>
-              C. Marquess of Queensberry (in his early thirties)<br>
-              D. James Figg (in his forties)."
-            </span></li>
-                                        </ul>
-                                    </li>
-                                    <li data-label="Level 3">
-          <span style="font-family: sans-serif;">
-            <strong>Intermediate.</strong> Moderate attention and scan are required. The target information is mixed with several distractors or spread over a fairly large scan area. <strong>Examples:</strong>
-          </span>
-                                        <ul>
-                                            <li><span style="font-family: sans-serif;">"Find everyone wearing glasses in this casual BBQ photo where 15 people are gathered around a table. Some are sitting, some standing, some looking at the camera while others are in conversation."</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">"In a 5-page technical document about basic geometry, locate all explicit references to the Pythagorean theorem (a² + b² = c²), where the equation appears 5 times mixed among references to 15 other geometric formulas, with occasional inconsistent equation numbering but standard mathematical notation."</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">
-              "As we all know, the Queensberry Rules are a set of rules for boxing that govern both amateur and professional matches. Who authored the Queensberry rules, which were published in 1867 for the sport of boxing? Choices: A. John Douglas (in his late twenties)<br>
-              B. John Graham Chambers (in his mid-twenties)<br>
-              C. Marquess of Queensberry (in his early thirties)<br>
-              D. James Figg (in his forties)<br>
-              E. James Zou (in his fifties)<br>
-              F. Lucy Grande (in her late twenties)<br>
-              G. Xiaoxiao Li (in her early forties)<br>
-              H. Enrique Garcia (in his late thirties)."
-            </span></li>
-                                        </ul>
-                                    </li>
-                                    <li data-label="Level 4">
-          <span style="font-family: sans-serif;">
-            <strong>High.</strong> Sustained tracking of one or various targets is required. The target information is in an environment mixed with numerous distractors and changing conditions, requiring some continuous monitoring amid competing signals. <strong>Examples:</strong>
-          </span>
-                                        <ul>
-                                            <li><span style="font-family: sans-serif;">"Listening to a symphony, identify all instances where the clarinet plays in a minor key, even when it's not playing the main melody."</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">"Track three orange spheres among twenty red spheres as they move randomly across a black screen (40 cm × 30 cm) at varying speeds (1-3 cm/s), with spheres frequently intersecting paths and maintaining a minimum separation distance of 2 cm. Each sphere is 1 cm in diameter."</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">"In a real-time video feed of a busy airport, finding the locations of ten blue suitcases."</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-label="Level 5+">
-          <span style="font-family: sans-serif; color: var(--mytitleAS);">
-            <strong>Level 5+</strong> <strong>Very High.</strong> Requires sustained attention and scan for simultaneous tracking of multiple targets across different domains or contexts, with continuous adaptation to fast-changing conditions. The target information is extremely difficult to distinguish from distractors or is hidden in a vast or constantly changing environment. <strong>Examples:</strong>
-          </span>
-                                        <ul>
-                                            <li><span style="font-family: sans-serif;">"While seated courtside at a professional basketball game, track two specific players throughout the entire game as they move at speeds up to 8m/s, frequently cluster with other players during rebounds, and weave through screens and defensive formations."</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">"Monitor four simultaneous video feeds of a crowded airport terminal from different angles, detecting subtle security-relevant changes (e.g. brief interactions &lt; 2 seconds, crowd flow changes, small object exchanges) across feeds."</span>
-                                            </li>
-                                            <li><span style="font-family: sans-serif;">"While monitoring multiple simultaneous customer service chat conversations in different languages, identify instances where customers are expressing the same underlying technical issue, even though they're describing it using different metaphors, technical terms, or cultural references specific to their region."</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="CEc" style="display: none;">
-                        <h3>Rubric for Verbal Comprehension (CEc)</h3>
-                        <p>[Rubric details for Verbal Comprehension]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Verbal Comprehension (CEc)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric evaluates the difficulty of a task&#x27;s comprehension requirements, encompassing the understanding of text, stories or the semantic content of other representations of ideas in different formats or modalities. It may include the interpretation of explicit and implicit meanings, recognition of relationships between concepts, processing of contextual information, and understanding of abstract ideas and complex systems. Noteworthy, the mere presence of specialized terminology or jargon does not necessarily indicate a high difficulty level in this rubric, as these terms may appear within tasks that follow simple, straightforward linguistic structures and are more reflective of domain knowledge rather than comprehension complexity. Further, for specialized formal languages (e.g., molecular structures, programming code) the task will be hard to comprehend only if the sequence in that formal language (e.g. molecular expression, snippet of code) is convoluted, but simple molecules or pieces of code should be easy. The rubric include difficult levels that range from tasks requiring no semantic comprehension to those demanding an understanding of highly convoluted, interconnected concepts, including the ability to process sophisticated theoretical frameworks, understand nuanced implications, and synthesize multiple complex perspectives across different domains and levels of abstraction.
+Level 0: None. Tasks at this level require no comprehension of language or semantic content, such as those that can be completed by non-human animals. Examples:
+* Pulling levers in a specific sequence (pull middle lever, then right lever, then left lever) to release food from a container, learning the pattern through trial and error.
+* Manipulating a twist-lid container with multiple appendages in a rotating motion until the lid separates from the base, then retrieving the contents inside.
+* Using a stick to push a banana that&#x27;s out of reach through a fence gap, by positioning and moving the stick in the correct direction.
+Level 1: Very Low. Tasks at this level require understanding of basic, explicit meanings in simple formats, including recognition of common words, straightforward statements, and clear one-to-one relationships between symbols and their meanings. Comprehension is limited to surface-level, literal interpretations without need for context or inference. Examples:
+* Identifying basic subject-verb relationships that describe observable actions (e.g., &quot;Context: The blue bird was flying high in the sky. Question: who was flying?&quot;).
+* Understanding simple questions that do not require sophisticated language skills such as &quot;Why is the sky blue?”
+* Understanding single-step instructions where the action directly matches the command (e.g., comprehending the sentence &quot;close the door for me&quot; and mentally connecting these words and the corresponding physical action).
+Level 2: Low. Tasks at this level involve comprehending straightforward messages with basic context, including simple cause-effect relationships, clear sequential instructions, and explicit connections between ideas. Understanding requires basic inference but remains tied to concrete, clearly stated information. Examples:
+* Capable of answering &quot;why&quot; questions about a simple story (e.g., &quot;Why did the girl take an umbrella?&quot; after reading &quot;Sarah saw dark clouds in the sky. She grabbed her umbrella before leaving home.&quot;)
+* Understanding simple explanations of processes (e.g., &quot;Plants need water and sunlight to grow, otherwise they will not survive, especially in harsh climate.&quot;)
+* In a recipe interface, interpreting &quot;Add milk slowly while stirring continuously until mixture thickens&quot; by understanding that the stirring must occur simultaneously with the milk addition, not after.
+Level 3: Intermediate. Tasks at this level require understanding of moderately complex information including implicit meanings, metaphorical language, and relationships between multiple concepts. Comprehension may involve processing both explicit and implicit information. Examples:
+* In a high school student&#x27;s history essay about the Industrial Revolution, following their argument that &quot;While factories created more jobs in cities, this urbanization ironically decreased quality of life because cramped living conditions and poor sanitation led to disease outbreaks.&quot; This requires understanding how the student is connecting multiple historical factors (industrialization, urbanization, living conditions, public health) and recognizing their use of &quot;ironically&quot; to highlight the unexpected negative consequence of economic progress.
+* In an employee handbook, understanding that the statement &quot;The company values work-life balance&quot; combined with &quot;Employees are expected to be responsive to urgent matters outside office hours&quot; represents a potential policy contradiction requiring contextual judgment.
+* In a technical manual, interpreting a troubleshooting section that requires understanding how different error messages might indicate the same underlying problem depending on the system&#x27;s state.
+Level 4: High. Tasks at this level demand comprehension of sophisticated content with multiple layers of meaning, complex relationships between concepts, and nuanced implications. Understanding requires integration of various information sources and recognition of subtle patterns and connections. Examples:
+* Following an accessible fiction story told from multiple viewpoints where each narrator provides partial, biased information, requiring the reader to construct the true sequence of events by reconciling conflicting accounts and recognizing each narrator&#x27;s limitations and motivations.
+* Understanding a complex academic argument that develops through multiple chapters, where key terms are gradually redefined and earlier arguments are recontextualized by later developments.
+* Interpreting a modern theatrical play where dialogue has multiple meanings based on staging directions, character backgrounds, and historical context, requiring simultaneous understanding of textual and performative elements.
+Level 5: Very High. Tasks at this level require mastery in understanding highly convoluted, abstract, and interconnected information systems, including sophisticated theoretical frameworks, convoluted narratives and nuanced philosophical arguments. Comprehension involves synthesizing multiple complex perspectives and understanding subtle distinctions. Examples:
+* Understanding well a convoluted legal document that requires tracking multiple cross-references, understanding nested conditions, and comprehending how different clauses modify each other.
+* Comprehending a modernist novel that uses a stream-of-consciousness narrative technique where multiple timelines, memories, and internal thoughts are interwoven without clear demarcation, requiring readers to track subtle linguistic shifts (changes in tense, pronouns, or narrative voice) to understand when the narrative moves between present action, past memories, imagined futures, and other characters&#x27; perspectives.
+* Understanding a convoluted visual narrative where multiple story threads are told simultaneously through different visual styles on the same page, requiring understanding of how the visual elements interact, conflict, and complement each other to create meaning. For example, a graphic novel page where realistic drawings depict current events, sketchy portions represent memories, and geometric patterns show emotional states, all interacting to tell a coherent story.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="CEe" style="display: none;">
-                        <h3>Rubric for Verbal Expression (CEe)</h3>
-                        <p>[Rubric details for Verbal Expression]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Verbal Expression (CEe)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric evaluates the difficulty of a task&#x27;s expression requirements, encompassing the generation and articulation of ideas, stories, or semantic content in different formats or modalities. It may include the usage  of the right vocabulary, adoption of the appropriate genre, formulation of explicit and implicit meanings, creation of relationships between concepts, incorporation of contextual information, expression of abstract ideas and complex systems, and transformation of sophisticated content into a smooth narrative. Noteworthy, the need of specialized vocabulary or jargon in the expression does not necessarily indicate a high level of difficulty, as these terms may be used within simple, straightforward linguistic structures requiring minimal compositional complexity and are more reflective of domain knowledge rather than expression sophistication. In addition, the difficulty level should correspond to the simplest expression effort to successfully solve the task, given that a solution to a task may be formulated in various ways with varied linguistic complexity; multiple-choice questions, even if the options are long and complex, generally do not require language expression beyond the basic level, so they are typically level 1. The rubric ranges from tasks requiring no meaningful expression to those demanding the generation of highly sophisticated, interconnected content, including the ability to create convoluted narratives, convey nuanced implications, and express multiple perspectives across different domains and levels of abstraction.
+Level 0: None. Tasks at this level involve no meaningful expression or communication, limited to automatic responses or simple pattern reproduction. The task can be completed through purely mechanical or algorithmic processes without any generation of meaning. Examples:
+* Repeating a sound pattern exactly as heard without understanding or modifying its meaning.
+* Copying text from one format to another without generating or modifying content.
+* Reproducing a sequence of gestures through simple mimicry.
+Level 1: Very Low. Tasks at this level require expressing basic, explicit meanings in simple formats, including use of common words, straightforward statements, and clear one-to-one relationships between ideas and their expression. Expression is limited to surface-level, literal articulation without need for context or nuance. Examples:
+* Stating immediate needs like &quot;I need water&quot; in a simple, direct, unambiguous way.
+* Solving a task that requires domain expertise to get the right answer but the answer only requires basic expression ability (e.g. “Given the product SMILES: O=C(NC1CCN(CCc2ccccc2)CC1)c1c[nH]c2ccc(F)cc12, predict the reactants SMILES”.
+* Multiple-choice QA questions, where the subject only needs to choose one readily available option, even though the accurate answer option may be formulated in a linguistically complex manner (e.g. &quot;The correct answer is option C. Reynolds and Khripkova would not make suitable business partners, [...], if they quarrel, know how to resolve their differences.&quot;)
+Level 2: Low. Tasks at this level involve producing straightforward messages with basic context, such as simple cause-effect relationships, clear sequential instructions, and explicit connections between ideas. Expression requires basic organization but remains tied to concrete, clearly stated information. Examples:
+* “Writing step-by-step instructions for making a sandwich, clearly indicating the sequence of actions and basic quantities needed.”
+* Creating a brief email to schedule a meeting, specifying time, place, and basic purpose.
+* Describing a simple process like plant growth, connecting the basic sequence of events: &quot;First the seed needs soil and water, then it grows roots, then it sprouts leaves.&quot;
+Level 3: Intermediate. Tasks at this level require generating moderately nuanced information, with attention to both content and presentation style. This includes selecting field-appropriate vocabulary, adapting to specific genres (like technical documentation or clinical notes), and creating coherent narratives that smoothly connect ideas. Expression may involve conveying both explicit and implicit information while maintaining consistent tone and voice throughout the text. Examples:
+* Writing explanatory notes for a simple geometry proof that guides the reader through the logic: &quot;To prove these triangles are similar, we first show their angles are equal. The alternate angles formed by these parallel lines are equal, and since both triangles share this angle at point A, we can conclude...&quot;
+* Writing product documentation that anticipates user confusion: &quot;While the red indicator light typically signals an error, in sleep mode it indicates normal operation. If the light flashes red during active use, consult the troubleshooting guide.&quot;
+* Writing short clinical notes that connect symptoms with potential causes: &quot;Patient presents with persistent cough and fatigue for 2 weeks. Given their recent travel history and exposure to dusty environments, considering both viral upper respiratory infection and environmental allergies as potential causes.&quot;
+Level 4: High. Tasks at this level demand generating sophisticated content with multiple layers of meaning, complex relationships between concepts, and nuanced implications. Such expressions may include the usage of linguistically advanced vocabulary and rhetorical devices, careful attention to genre conventions, and the ability to integrate multiple perspectives and communicate subtle patterns and connections. Examples:
+* Writing lecture notes that integrate multivariable calculus with linear algebra to explain the connection between Jacobian matrices, coordinate transformations, and volume changes in higher dimensions.
+* Writing technical documentation that addresses multiple user levels simultaneously: &quot;The API&#x27;s modular design allows for both simple plug-and-play implementation for basic use cases and sophisticated customization through advanced configuration options, ensuring scalability as your needs evolve.&quot;
+* Writing a detailed legal brief that weaves together statutory requirements, case law precedents, and policy implications: &quot;While Smith v. Jones (2019) established a broad interpretation of &#x27;reasonable care,&#x27; the specific circumstances of our case, combined with the legislative history of Section 47(b), suggest that this standard should be qualified when applied to specialized industrial settings...&quot;
+Level 5: Very High. Tasks at this level require mastery in generating convoluted, abstract, and interconnected content, including nuanced vocabulary, convoluted narratives, deep arguments, and conveying multiple perspectives and subtle distinctions simultaneously. Examples:
+* Writing a few paragraphs of a graduate-level textbook section that develops the relationship between Lie groups, Lie algebras, and differential manifolds.
+* Creating a convoluted multi-layered narrative that simultaneously develops several plot threads through carefully structured revelations, such as a novel seemingly disconnected opening chapters gradually revealing their interconnections through subtle linguistic echoes and thematic resonances, allowing readers to piece together the full story while maintaining tension across multiple timelines.
+* Writing well-thought comprehensive hospital policy guidelines that address complex medical, legal, and ethical considerations: &quot;The protocol for experimental treatments must balance patient autonomy, clinical evidence requirements, and legal liability considerations. When standard treatments are exhausted, the following decision tree integrates real-time clinical assessment, informed consent documentation, ethics committee review, and liability mitigation steps, while maintaining compliance with both state regulations and international medical ethics standards...&quot;
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="CL" style="display: none;">
-                        <h3>Rubric for Conceptualisation, Learning and Abstraction (CL)</h3>
-                        <p>[Rubric details for Conceptualisation, Learning and Abstraction]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Conceptualisation, Learning, and Abstraction Rubric (CL)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric assesses the difficulty level of tasks requiring conceptualization, learning, and abstraction during the completion of tasks. It evaluates the extent to which a task necessitates the formation of new concepts, engagement in inductive and analogical reasoning, mapping of relationships between domains, and the generation of abstractions from concrete examples. Higher levels on this scale represent increasing demands for real-time learning, pattern identification, hypothesis formation, analogical transfer, and the contrast of knowledge across diverse domains.
+Level 0: None. The task requires no conceptualization, learning, abstraction, inductive or analogical reasoning. It involves applying well-established procedures or recalling known information, even for complex tasks. No new abstractions, analogies, or learning occur during task execution.
+Examples:
+* Performing basic one-digit arithmetic multiplications using memorized multiplication tables (like 3x3 = 9).
+* Sorting short texts into predefined categories based on a list of indicator words, without inferring new indicators.
+* What was the name of Abraham Lincoln’s father?
+Level 1: Very Low. The task involves minimal conceptualization, learning, inductive or analogical reasoning. It requires simple pattern identification or following basic instructions, with very limited generalization or basic surface-level analogies occurring during the task.
+Examples:
+* &quot;Continuing a basic letter sequence (e.g., “a, c, e, g, __”).
+* “Given a red circle, a red square, a red triangle and a blue pentagon, find the one out, which is the blue pentagon.”
+* Given a pair of words (like &quot;hot and cold&quot;), choose another pair from a list that shares the same relationship. For example, if &quot;hot&quot; and &quot;cold&quot; are opposites, you&#x27;d look for another opposite pair like &quot;up and down.&quot;
+Level 2: Low. The task requires basic conceptualization, learning, inductive and analogical reasoning. It involves generalizing from a small set of examples, applying simple analogies to closely related domains, or applying simple instructions to new but closely related tasks.
+Examples:
+* Given the sentence ‘As it started raining, Alice opened her brolly.’ inferring the meaning of the unknown word (brolly) by using surrounding context clues, forming a basic abstraction about its possible definition.
+* In a fictional planet, observing in a garden where light yellow and light orange plants grow towards light sources over time but dark blue and dark red plants don’t, and forming a basic hypothesis between the colors and plant behavior.
+* Adapting a solution from a previously solved secondary school math problem to a new problem with very similar structure but different surface features (e.g. numbers, names and context). While the core mathematical approach remains similar, the adaptation still requires recognizing how small variations in the new problem might require adjustments to the original solution method.
+Level 3: Intermediate. The task involves moderate conceptualization, learning, and inductive and analogical reasoning. It requires recognizing broader patterns, applying analogies across moderately different domains, and forming more complex hypotheses through analogical reasoning.
+Examples:
+* Reading passages where certain words are consistently replaced with nonsense words: &#x27;The zork lives in a tree. The small zork ate berries. Many zorks gather in winter [...]. The tired zork slept quietly&#x27;. Through the multiple examples, learning not just that &#x27;zork&#x27; likely means &#x27;squirrel&#x27;, but also understanding how it follows plural rules (&#x27;zorks&#x27;), can be modified by adjectives (&#x27;small zork&#x27;, &#x27;tired zork&#x27;), and performs actions typical of animals.
+* While playing a strategy game named Xiangqi (also known as Chinese chess) without any prior experience on it, coming up with some effective tactics through repeated observations and trials as well as some past experience playing chess.
+* Given data about plant growth in artificial conditions where light color, temperature, and humidity vary cyclically, observing that plants develop different leaf patterns depending on which factor changes first each day. Through systematic observation, forming basic hypotheses about how the sequence of environmental changes affects growth patterns.
+Level 4: High. The task requires substantial conceptualization, inductive and analogical reasoning, and abstraction, involving the integration of multiple concepts, creating complex analogical mappings across diverse domains, and forming and testing complex hypotheses.
+Examples:
+* Working with a collection of text messages where response times vary significantly. Through analysis, discovering that certain word combinations, sentence structures, and punctuation patterns consistently correlate with faster or slower response times, then using these insights to predict likely response speeds for new messages.
+* While learning Go after experience with chess and Xiangqi, discovering how stone formations serve multiple strategic purposes that differ fundamentally from piece-based games. Through systematic play and analysis, understanding how a group of stones can simultaneously secure territory, threaten invasion, and maintain connectivity with other groups. This requires substantial abstraction beyond piece-movement games to grasp how value emerges from stone relationships rather than individual pieces.
+* Working with a sequence of pattern acceptance tests where rules change systematically. For instance, in judging whether grid arrangements of colored shapes are &quot;valid&quot;: early patterns are accepted based on color adjacency (e.g., &quot;red must never touch blue&quot;), then the rule shifts to consider shape orientation (e.g., &quot;triangles must point toward squares&quot;), and finally combines both aspects (e.g., &quot;red triangles must point toward blue squares&quot;). The systematic nature of the rule changes follows a clear progression from simple single-attribute rules to combined rules. The subject must track these rule evolutions to correctly predict which new grid arrangements would be considered valid, understanding that rules become progressively more complex by combining previous attributes rather than introducing entirely new concepts.
+Level 5: Very High. The task involves very advanced conceptualization, inductive and analogical reasoning, and abstraction. It requires generating new analogical frameworks in real-time, mapping relationships across highly diverse and abstract domains, or solving complex problems through novel analogical insights.
+Examples:
+* Solving a visual puzzle where three different properties (symmetry, rotation, and scaling) must be understood at both the element level and the pattern level. For instance, individual shapes follow one set of transformation rules, while the overall arrangement follows a different set of rules, and the relationship between these two rule sets must be discovered to predict the next state.
+* Designing a new electronic musical instrument after studying blueprints of synthesizers, amplifiers, and effect pedals. This requires abstracting core principles of signal generation, processing, and control from each device (oscillation, filtering, envelope shaping, feedback), understanding how these principles create different sonic characteristics, and then creatively recombining them to produce new types of sounds. The task demands identifying how fundamental concepts manifest differently across devices (like how feedback creates sustain in an amplifier but modulation in a ring modulator), then synthesizing these insights to create sound-generating mechanisms.
+* Working with a sequence of pattern acceptance tests where rules evolve with increasing abstraction and self-reference. Starting from &#x27;red triangles must point toward blue squares&#x27;, patterns evolve to where shapes establish relationships based on their relative properties. For instance, shapes with more sides must point toward shapes with fewer sides, but this relationship inverts when the shapes share colors. Furthermore, each valid pattern must mirror a small-scale arrangement within its larger structure - if three triangles form a particular relationship on one side of the grid, the overall shape arrangement of the entire grid must follow that same relationship. The subject must discover these nested self-referential patterns and predict how they apply at different scales, requiring both pattern recognition and the generation of new frameworks for understanding how rules can reference themselves.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="MCr" style="display: none;">
-                        <h3>Rubric for Identifying Relevant Information (MCr)</h3>
-                        <p>[Rubric details for Identifying Relevant Information]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Identifying Relevant Information (MCr)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric assesses the difficulty of the metacognitive processing required by the respondent to identify the information necessary during the process of solving the task with a given set of information. More concretely, it involves the respondent&#x27;s ability to recognize what information helps solve the task or does not, and how this recognition process unfolds as they work toward the solution.
+Level 0: None. All necessary information is immediately apparent and directly applicable to solving the task, or no information is provided and none is needed. No metacognitive processing is required to identify relevant information during problem-solving.
+Examples:
+* &quot;What is the capital of France?&quot;
+* &quot;What is 2513441 + 7519239519281?&quot;
+* &quot;How many sports correspond to IPTC Newscode mediatopic/20000960?.&quot;
+Level 1: Very low. Most relevant information is readily identifiable, with minimal extraneous details. The respondent needs to do simple filtering or selection of information as they proceed with solving the task, but the relevance of information remains clear throughout the process.
+Example:
+* &quot;John has 5 apples and 3 oranges. How many apples does John have?&quot;
+* &quot;Alice’s mother has several brothers, one married to Helen, who currently lives in Barcelona. What’s Helen with respect to Alice?&quot;
+* &quot;The recipe calls for 4 cups of flour and 2 cups of sugar. How many cups of flour are needed?&quot;
+Level 2: Low.  A fair amount of potentially relevant information is provided, mixed with some irrelevant details. As the respondent works through the problem, they need to evaluate which pieces of information are useful for the next step in their solution process, requiring ongoing but straightforward metacognitive assessment.
+Examples:
+* &quot;Sarah went to the grocery store on Tuesday. She bought 3 oranges for $0.50 each, 2 apples for $0.75 each, and a loaf of bread for $2.25. What was the total cost of the fruit Sarah purchased?&quot;
+* &quot;In preparation for a marathon, James ran 5 miles on Monday, 8 miles on Wednesday, and 6 miles on Saturday. He also trained at the gym for 2 hours each week. How many miles did James run in total?&quot;
+* &quot;Mary took photos of the Colosseum at sunset and visited the Vatican Museums where she spent two hours studying the famous ceiling of the Sistine Chapel. She also bought souvenirs for her friends and got lost trying to find her hotel. What did Mary observe at the Vatican Museums?&quot;
+Level 3: Medium. The respondent must engage in moderate metacognitive processing throughout the problem-solving process in one or both of these ways: (1) evaluating and reconciling potentially conflicting or redundant information that serves as distractors within a manageable search space, or (2) recognizing what additional information or problem-solving approaches are needed when not all relevant information is explicitly provided, but the possible solution paths remain relatively constrained. Some information that seems irrelevant initially may become important later, or some unstated information may become crucial to identify as the solution progresses.
+Examples:
+* &quot;A student&#x27;s short essay discusses how Shakespeare&#x27;s character Hamlet shows signs of depression. In the essay, it states that Hamlet speaks harshly to Ophelia in Act 3, telling her &#x27;Get thee to a nunnery&#x27; and refusing her love. The essay also mentions his soliloquy &#x27;To be or not to be,&#x27; his wearing of dark clothes at court, and his Act 1 conversation with Horatio about his father&#x27;s ghost. The essay is 1000 words long and includes quotes from Acts 1, 3, and 5. What evidence does the essay present about Hamlet&#x27;s interactions with Ophelia?&quot;
+* &quot;A news article discusses a local park renovation project, mentioning the park&#x27;s historical significance from the 1950s, current visitor numbers, planned new features including a playground and walking paths, the project&#x27;s $500,000 budget split across different improvements, debates about preserving old trees versus adding parking spaces, and quotes from both the project manager and local residents about their memories of childhood visits. What are the specific new features planned for the park renovation?&quot;
+Level 4: High. The problem-solving process requires sophisticated metacognitive strategies throughout, with a large search space to navigate. This could involve either: (1) evaluating multiple possible interpretations of significant amounts of conflicting/redundant information that serves as distractors, requiring exploration of various combination possibilities, or (2) identifying crucial unstated information or approaches needed for solution while considering multiple possible solution paths and their implications. The respondent must frequently reassess their understanding and adjust their approach as they either discover new connections between provided information or recognize important unstated elements needed for solving the task.
+Examples:
+* &quot;In this escape room scenario, you find a desk with a locked drawer, a calendar marked with different colored circles, a bookshelf with titles in various languages, and a wall clock showing 3:45. On the desk, there&#x27;s a note that reads &#x27;Time reveals knowledge, knowledge unlocks secrets.&#x27; A painting on the wall shows a sunset over a library, and there&#x27;s a globe with certain cities marked with stars. Each time you examine an object, you notice new details that might connect to others. How can you open the locked drawer?&quot;
+* “Assume that there exist only two types of people: knights and knaves. Knights always tell the truth, while knaves always lie.\nYou are given the statements from 6 characters. Based on their statements, infer who is a knight and who is a knave.\nA: E is a liar if and only if C is a liar.\nB: If D is a liar, then E is a liar.\nC: E is a truth-teller and F is a truth-teller.\nD: C is a liar if and only if B is a liar.\nE: If B is a liar, then C is a truth-teller.\nF: B is a liar if and only if A is a liar.”
+* &quot;A customer survey about a new phone model gathered feedback through three methods: online reviews mentioned battery life lasting &#x27;all day&#x27;, &#x27;about 12 hours&#x27;, or &#x27;14-16 hours&#x27;; in-person interviews reported battery performance as &#x27;excellent&#x27;, &#x27;better than previous model by 4 hours&#x27;, or &#x27;lasting from morning to night&#x27;; and usage data showed power consumption patterns varying between 10-18 hours depending on features used. Technical specs list battery capacity, screen brightness impact, and various power-saving modes. What can be concluded about the phone&#x27;s actual battery life?&quot;
+Level 5: Very high. The problem-solving process demands constant high-level metacognitive monitoring and regulation in challenging conditions: either most of the provided information is redundant, misleading, or contradictory (while remaining solvable), or crucial information about solution approaches and constraints is left unstated and must be discovered. The respondent must maintain awareness of many possible interpretation frameworks or solution paths simultaneously, regularly revisiting their understanding as they either recontextualize conflicting information or identify necessary unstated information and constraints.
+Examples:
+* Riddles such as: &quot;I am found in ancient scrolls and modern screens, made of nothing but seen by all, I dance between light and dark, born in storms yet living in peace, flowing like water but dry as sand, silent as night but telling stories, changing shape with every eye yet always staying the same. Sometimes I march in straight lines, other times I curl and twist, I can be bold or gentle, thick or thin, but I never truly exist. What am I?&quot; (the answer is &quot;shadow&quot;)
+* “Solve this cryptic crossword puzzle: &#x27;Stop for break, drink coffee and tea endlessly, stir milk around in a mug - useless without morning essentials!’” (the answer is &quot;breakfast&quot;)
+* &quot;A restaurant review contains extensive details about the reviewer&#x27;s experience: describes the rainy drive to the location, the hostess&#x27;s friendly greeting, memories of their grandmother&#x27;s cooking, opinions about the restaurant&#x27;s decor choices, a lengthy story about their career as a food critic, descriptions of fellow diners&#x27; conversations, commentary about parking difficulties, their favorite recipes, the day&#x27;s weather forecast, and briefly mentions in different places that the pasta was &#x27;perfectly cooked&#x27;, &#x27;somewhat firm&#x27;, &#x27;just right&#x27;, and &#x27;could have been softer&#x27;. What was the reviewer&#x27;s assessment of the pasta&#x27;s texture?&quot;
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="MCt" style="display: none;">
-                        <h3>Rubric for Critical Thinking Processes (MCt)</h3>
-                        <p>[Rubric details for Critical Thinking Processes]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Critical Thinking Processes (MCt)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric assesses the difficulty level of metacognitive engagement required by the question. More concretely, the level represents the extent to which the question requires the respondent to monitor or regulate multiple thought processes to answer the question effectively, ranging from simple recall to high-level critical thinking.
+Level 0: None. No critical thinking or analysis is needed.
+Examples:
+* Clapping one’s hands with another entity.
+* Simple recall of facts without further processing.
+* Recognizing a familiar face from a photograph.
+Level 1: Very Low. The task requires recall or recognition of facts, with a low level information processing required. The respondent needs to retrieve information directly from memory or identify very obvious relationships. There is no need for critical thinking or analysis beyond the most elementary level.
+Examples:
+* Selecting the correct meaning of a common word from multiple clearly distinct definitions.
+* Matching simple synonyms, such as &quot;big&quot; and &quot;large&quot;.
+* Question: What was the time 5 years and 6 months before Jan, 1956?.
+Level 2: Low. The task involves mostly straightforward comprehension or application of known concepts, with some information processing. The respondent may need to demonstrate understanding by explaining ideas, making simple comparisons, or applying concepts in familiar contexts. A low-level of critical thinking is required, such as recognizing generally obvious patterns or making simple categorizations.
+Examples:
+* Answering the question: &#x27;What happens in Cinderella when the clock approaches midnight?&#x27; The answer requires explaining that Cinderella must flee because her magical transformation will end.
+* Giving the smallest amount of coins as change from a purchase.
+* Answering the question: “How many solid $1 \times 1 \times 1$ cubes are required to make a solid $2 \times 2 \times 2$ cube?”.
+Level 3: Intermediate. The task necessitates a considerable amount of analysis or synthesis of information. The respondent needs to engage in moderate critical thinking, such as identifying patterns, making inferences, or applying concepts to new situations.
+Examples:
+* Analyzing the symbolism in a poem and explaining how it contributes to the overall theme.
+* Identifying potential biases in a news article and explaining their impact on the information presented.
+* Explaining how a price reduction could lead to increased overall revenue through its effect on sales volume.
+Level 4: High. The task demands advanced critical thinking skills, including evaluation of complex ideas, analysis of multiple perspectives and assumptions, or creation of new concepts. The respondent must maintain consistent awareness of thinking processes and potential biases.
+Examples:
+* Evaluating a school&#x27;s proposal to extend the lunch period by examining the evidence for improved student focus, considering impacts on different stakeholders like teachers and students, and analyzing how personal preferences might affect one&#x27;s assessment of the policy.
+* Designing a study to compare two teaching methods for basic math by identifying potential sources of bias, developing fair assessment criteria, and planning how to control for differences in student ability levels.
+* Analyzing the role of bread prices in the French Revolution by examining economic data from different regions, comparing its major impact between urban and rural areas, and evaluating how food scarcity combined with tax burdens and wage stagnation influenced public unrest.
+Level 5: Very High. The task demands the highest level of critical thinking, requiring sophisticated metacognitive strategies focused on examining reasoning processes, identifying logical fallacies, evaluating competing arguments, and reaching well-reasoned conclusions. The respondent must reflect on their own thinking processes, assumptions, and biases while engaging with complex ideas.
+Examples:
+* Analyzing a proposed economic study that claims to prove racial discrimination in hiring by examining the researchers&#x27; unstated assumptions about causality, identifying potential confounding variables they haven&#x27;t controlled for, evaluating whether their statistical methods actually support their conclusions, examining your own potential biases about the topic, and determining what can and cannot be legitimately concluded from their methodology - all while maintaining awareness of how your own socioeconomic background might influence your analysis.
+* Evaluating a complex court case by dissecting the logical structure of competing arguments from prosecution and defense, identifying unstated assumptions in witness testimony, examining how your own biases about the defendant might affect your judgment, analyzing the credibility and limitations of different pieces of evidence, and reaching a conclusion while explicitly acknowledging areas of reasonable doubt and uncertainty.
+* Breaking down a philosophical argument about consciousness by identifying circular reasoning and unstated premises, examining how different definitions of key terms affect the argument&#x27;s validity, evaluating the credibility of thought experiments used as evidence, testing the argument&#x27;s logical consistency, recognizing your own presuppositions about the nature of mind and reality, and determining which conclusions are truly warranted by the premises.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="MCu" style="display: none;">
-                        <h3>Rubric for Calibrating Knowns and Unknowns (MCu)</h3>
-                        <p>[Rubric details for Calibrating Knowns and Unknowns]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Calibrating Knowns and Unknowns (MCu)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric assesses how difficult it is for the respondent to accurately evaluate whether they know or don&#x27;t know something. It focuses on metacognitive assessment - the ability to recognize the boundaries of one&#x27;s knowledge and confidently identify what one knows they know, knows they don&#x27;t know, or is uncertain about.
+Level 0: None. The respondent can immediately and unambiguously determine whether they know something or know they don&#x27;t know it. No metacognitive effort is required.
+Examples:
+* “Tell me the typical colour of the sky on Earth during the day?”
+* “Can it snow when the environmental temperature goes up to 40 degree celsius?”
+*  &quot;What&#x27;s the name of Taylor Swift&#x27;s maternal grandmother?&quot;
+Level 1: Very low. Minimal metacognitive effort is needed to determine whether one has the knowledge to answer. The boundaries between knowing and not knowing are very clear.
+Examples:
+* “Calculate 164942+26250737, tell me if you think you have done it well.” (the score is good if the sum is right and says correct, or sum is wrong and says incorrect)
+* “How many hairs did Barack Obama have exactly when he woke up on the morning of March 1, 2024?” (the score is good if the answer given or chosen is that it can’t be known)
+* “Given $2w+4t=14$ and $4w+5t=25$, calculate the value of $2w+3t$ and tell me if you think you have done it well.” (the score is good if the answer is right and says correct, or the answer is wrong and says incorrect)
+Level 2: Low. Some metacognitive effort is required to assess the boundaries of one&#x27;s knowledge, but the assessment is still relatively straightforward.
+Examples:
+* “Given the new breakthroughs in chemistry this year, explain how to synthesise gold out of boiling both blonde hair and metals made of bronze” (the score is good if the task is refused, as it is clearly not possible).
+* “Say something that indicates your level of Estonian” (assuming you know a bit of Estonian).
+* Determine for some simple arithmetic operations with logarithms of base 2 when you can do it yourself or require a calculator”.
+Level 3: Medium. Moderate metacognitive effort is required to determine the boundaries of one&#x27;s knowledge. There may be some uncertainty about whether one truly knows something or just thinks they might know it.
+Examples:
+* “Solve a simple 9x9 Sudoku puzzle” (since it requires tracking which numbers are certain about in each 3x3 box versus numbers that have only been partially eliminated).
+* “Given a detailed passage about the American Civil War mentioning several battles and dates, identify which specific facts you&#x27;re confident enough to verify versus those you&#x27;d need to research”.
+* “When presented with a system of three linear equations, determine whether you know enough about elimination and substitution methods to solve it completely or if you might be missing key steps.”
+Level 4: High. Significant metacognitive effort is needed to determine whether one truly knows something or just has partial knowledge. The line between knowing and not knowing becomes blurry.
+Examples:
+* “Given a dataset of 100 observations with 20% missing values randomly appearing across different variables of interest and potential sampling bias, assess whether you can confidently identify which statistical conclusions are reliable versus which might be affected by unknown factors in the data collection process.””
+* “Given a patient with symptoms of fever, fatigue, and joint pain, determine which potential diagnoses you can confidently rule out versus which require additional information or testing.”
+* “When analyzing a legal document with multiple clauses and cross-references, identify those parts you can interpret with certainty versus those that require expert consultation.”
+Level 5: Very high. Extremely challenging to determine the boundaries between what one knows and doesn&#x27;t know. Requires sophisticated metacognitive assessment to avoid overconfidence or underconfidence.
+Examples:
+* “Predict how much a machine learning model&#x27;s accuracy will drop (if any) over the next 6 months for a system that classifies which emergency room patients are at high risk of developing complications within the next 24 hours, given evolving disease patterns, changes in hospital protocols, potential new variants, seasonal effects, varying patient demographics, and changing physician response patterns. ”
+* &quot;In a Texas Hold&#x27;em poker hand, after the flop, determine your winning probability with J♠K♠, three low hearts on the board, and five opponents you’ve been playing with for some time.&quot;
+* “During an ongoing international crisis (e.g., a major conflict or global financial crisis), determine whether to invest a significant portion of your portfolio in seemingly undervalued stocks, considering factors such as market psychology, geopolitical developments, supply chain disruptions, currency fluctuations, central bank responses, and potential long-term structural changes to affected industries.”
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="MS" style="display: none;">
-                        <h3>Rubric for Mind Modelling and Social Cognition (MS)</h3>
-                        <p>[Rubric details for Mind Modelling and Social Cognition]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Mind modelling and social cognition (MS)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This criterion assesses the level of cognitive demands associated with mind modelling of others and social cognition. The level of cognitive demands progresses from tasks that require no mind modelling (specifically, the ability to model the minds of other agents) or social cognition to those that require reasoning about how the beliefs, desires, intentions, and emotions of multiple other agents might interact to determine future behaviours.
+Level 0: None. The task does not require mind modelling or social cognition. It may not involve other agents, or if it does, perceiving or interacting with those agents is not necessary to complete the task.
+Examples:
+* Solving a Sudoku puzzle independently.
+* Operating a dishwasher according to its instruction manual.
+* Reading a book silently to yourself, even if others are present in the room.
+Level 1: Very low. Performance in this task is improved through the detection or recognition of other agents and by basic social learning (e.g., imitation). Critically, reasoning about observed behaviour or attributing mental states to others is not required for good performance in this task.
+Examples:
+* Mimicking someone&#x27;s hand gestures during a conversation
+* Following another person&#x27;s gaze to find where they left their keys.
+* Copying the sequence of buttons someone presses to operate a vending machine.
+Level 2: Low. This task requires some basic intuition about the behaviour of others, but only minimal levels of mental state attribution. Good performance might be based on developing accurate associations between other’s responses and the stimuli that caused them. Note, this reasoning need not be explicit.
+Examples:
+* Recognizing that someone using a rock to crack open a coconut is trying to get to the food inside.
+* Identifying that someone&#x27;s scrunched nose and turned head means they don&#x27;t like the smell of spoiled milk.
+* Solving an abstract logic problem in which only minimal levels of mind modelling is needed (e.g. “Assume that there exist only two types of people: knights and knaves. Knights always tell the truth, while knaves always lie.\nYou are given the statements from 3 characters. Based on their statements, infer who is a knight and who is a knave.\nA: C is a liar.\nB: C is a truth-teller and A is a truth-teller.\nC: B is a truth-teller and A is a liar.”)
+Level 3: Intermediate. This task goes beyond simple state-behaviour associations and involves attributing cognitive or affective states (i.e., mentalising). That is, it involves inferring specific mental properties about others (‘they believe the moon landing was a hoax’, ‘they want a glass of water’). The task may not, however, require explicit reasoning about these mental states (i.e., full-blown theory of mind).
+Examples:
+* Telling a colleague about a mutual friend&#x27;s new job, knowing they haven&#x27;t heard the news yet and thus might be interested.
+* Finding a good hiding spot in hide-and-seek by visualizing where the seeker might look.
+* Recognizing that someone checking their watch repeatedly during a meeting probably wants to leave.
+Level 4: High. This task requires a full theory of mind to be solved effectively. It requires not only the attribution of mental states to others, but explicit reasoning about those states. It may also require the integration of social knowledge and heuristics about normal agentic behaviour to accurately predict future behaviour. Importantly, this task also requires a clear distinction between self- and other-related representations.
+Examples:
+* Developing an intuitive theory about an agent’s future behaviour such as understanding that Sally will look for her marble in the basket where she left it, even though Anne moved it to the box when Sally was away.
+* Distinguishing between one’s own emotional reaction to a friend’s story and what the friend is feeling.
+* Recognizing not to point out a spelling mistake in your manager&#x27;s presentation based on their emotional state, personality, and the social context.
+Level 5: Very high. This task requires exceptional mind modelling and social cognition abilities. It goes beyond generating intuitive theories about another agent within a dyadic interaction, and instead requires the combination of multiple theories of mind corresponding to the intentions, emotions, and beliefs of a range of different agents. Expanding the scope of mind-modelling and social cognition to include multiple agents would enable more sophisticated forms of collaborative action. Tasks at this level may require an understanding of the complex networks and hierarchies that form within social groups.
+Examples:
+* Comprehending the plot of a romance novel or the ‘social drama’ at a dinner party that requires modelling the mental states of multiple agents (e.g., ‘I heard that Jane told Steve that his girlfriend Abigail wanted to leave, but that he didn’t believe her, thinking Jane was just causing trouble because she had seen Abigail talking to her boyfriend Andrew…’)
+* Appreciating the behaviour of individuals within a work team and managing the situation in which one employee has misinterpreted another&#x27;s actions as deliberately unhelpful, which has created tension that affects the whole group&#x27;s dynamics
+* Leading a negotiation between multiple stakeholders where each party has different beliefs about others&#x27; intentions and bottom lines, while managing the complex emotional dynamics between opposing personalities.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="QLl" style="display: none;">
-                        <h3>Rubric for Logical Reasoning (QLl)</h3>
-                        <p>[Rubric details for Logical Reasoning]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Logical Reasoning (QLl)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric evaluates the logical reasoning demands of tasks across six levels of difficulty, focusing exclusively on deductive reasoning, which is required whenever a task involves matching and applying rules, procedures, or algorithms to solve problems, making structured decisions based on given premises, or deriving conclusions through systematic steps. This includes tasks ranging from basic arithmetic operations to sophisticated multi-step problem solving that requires careful chaining of logical relationships. Each level increases in complexity based on the intricacy of logical constructs, the depth of reasoning required, the number of premises involved, and the abstraction of concepts.
+Level 0: None. Tasks at this level do not require any logical reasoning. They involve simple identification or recalling memorized facts without the application of rules or relationships, as no logical constructs or premises are present.
+Examples:
+* Naming the capital city of a country without considering any relationships (e.g., “What is the capital of Austria?”).
+* A pure knowledge question like “Which country won the football world cup in 2008?”
+* “Match this circle to another circle.”
+Level 1: Very low. Tasks require recognition of basic logical relationships and straightforward deductions from clearly stated premises. They may involve matching objects based on a single criterion or recognizing a direct implication without any complex logical operators, quantifiers, or negations.
+Examples:
+* Simple sequential logic without requiring complex reasoning (e.g., “If today is Monday, what day will it be tomorrow?”)
+* “When the light is red, stop. The light is red. What should you do?”
+* “Compute the sample standard deviation of ${-12, 51, 21, -9, -8, -7}$.”
+Level 2: Low. Tasks involve simple sequential reasoning or basic syllogistic reasoning with clear premises. Logical statements may include basic quantifiers such as &quot;all&quot; or &quot;some&quot; but involve direct relationships without complex integration of multiple premises.
+Examples:
+* Identifying characteristics within a biological classification  (e.g., “If all mammals are warm-blooded and all whales are mammals, then all whales are warm-blooded.”)
+* Evaluating logical inferences from categorical statements (e.g., “If some books are fiction and all fiction books are interesting, can we conclude that some books are interesting?”)
+* $$\begin{aligned}&amp; b=2.35+0.25 x \\&amp; c=1.75+0.40 x\end{aligned}$$In the equations above, $b$ and $c$ represent the price per pound, in dollars, of beef and chicken, respectively, $x$ weeks after July 1 during last summer. What was the price per pound of beef when it was equal to the price per pound of chicken?
+Level 3: Intermediate. Tasks involve multi-step logical deductions that require integrating multiple statements and the use of simple negations and varied quantifiers. Tasks may include combinations of different types of logical statements, necessitating the linking of several ideas to reach a conclusion.
+Examples:
+* “If no reptiles have fur, all snakes are reptiles, and some pets are snakes, then some pets do not have fur.”
+* “Solve this puzzle that requires linking multiple premises: In a group of people, if everyone wearing red shirts is older than 30 and no one older than 30 likes ice cream, can a person wearing a red shirt like ice cream?”
+* ​​Find the characteristic polynomial of the following matrix:\n$\left(\n\begin{array}{ccc}\n -\frac{61}{7} &amp; -\frac{41}{7} &amp; -\frac{87}{7} \\\n -\frac{83}{7} &amp; \frac{93}{7} &amp; -6 \\\n \frac{23}{7} &amp; -\frac{26}{7} &amp; \frac{95}{7} \\\n\end{array}\n\right)$
+Level 4: High. Tasks involve complex chains of logical deductions, using advanced logical constructs such as conditionals (&quot;if-then&quot;), biconditionals (&quot;if and only if&quot;), and multiple quantifiers. They require synthesizing numerous premises with intricate relationships to navigate through the task and reach a valid conclusion.
+Examples:
+* “If all A are B, some B are C, no C are D, and all D are E, what can be inferred about the relationship between A and E?”
+* &quot;If all people at the party are over 18, some party attendees are graduate students, all graduate students have completed college, some college students are under 18, and no one under 21 can serve on the party planning committee, what can we determine about whether all graduate students at the party are eligible to be planners?&quot;
+* “A music producer is recording 7 albums one after another? F, G, H, J, K, L and M, but it is not necessary to record them in this order. When arranging the sequence of recording these 7 albums, the following conditions must be met? (l) F must be ranked second.(2) J cannot be ranked seventh.(3) G can neither be directly in front of H nor immediately after H.(4) H must be somewhere in front of L.(5) L must be somewhere before M.\nQuestion: Which of the following can be the order of recording these 7 records from 1 to 7?\nChoices:\nA. F, K, G, L, H, J, M.\nB. G, F, H, K, L, J, M.\nC. G, F, H, K, L, M, J.\nD. K, F, G, H, J, L, M.”
+Level 5: Very high. Tasks require abstract and complex logical reasoning involving intricate deductive chains and advanced logical structures, such as nested conditionals and multiple levels of negation. They require deep analytical thinking and the ability to handle multiple premises with subtle interactions in order to evaluate sophisticated hypotheses or identify inconsistencies and fallacies.
+Examples:
+* “Solving this advanced logic puzzle involving the manipulation of several interrelated statements: In a group of five people, if each person knows exactly two others and no one knows the same two people, how can the relationships be arranged?”
+* “In a voting system with three committees (A, B, C), where each committee must have at least four members, a proposition is valid if and only if it satisfies one of these two conditions: either (1) it receives support from all members of at least two committees — except when there exists a member who serves on all three committees and chooses to abstain, in which case validity requires support from every member of exactly two committees, none of whom has ever voted the same way as any currently abstaining member on any past proposition — or (2) for any committee that unanimously opposes the proposition, there must exist exactly two members from each of the other committees who both (a) currently support the proposition and (b) have cast different votes from each other on every past proposition they both voted on, with the additional requirement that no supporting member has ever voted the same way as any current abstaining member on any proposition that achieved supermajority approval. Given a specific set of committee memberships, their complete voting histories, and their votes on a current proposition, determine whether the proposition is valid according to these rules.”
+* “A convex 2019-gon \(A_{1}A_{2}\ldots A_{2019}\) is cut into smaller pieces along its 2019 diagonals of the form \(A_{i}A_{i+3}\) for \(1 \leq i \leq 2019\), where \(A_{2020}=A_{1}, A_{2021}=A_{2}\), and \(A_{2022}=A_{3}\). What is the least possible number of resulting pieces?”
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="QLq" style="display: none;">
-                        <h3>Rubric for Quantitative Reasoning (QLq)</h3>
-                        <p>[Rubric details for Quantitative Reasoning]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Quantitative Reasoning (QLq)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This criterion assesses the difficulty level of a task in requiring working with and reasoning about quantities, numbers, and numerical relationships. More specifically, the level represents the complexity of numerical operations and quantitative concepts needed to solve the task, ranging from simple counting and arithmetic to sophisticated analysis involving multiple quantitative variables, relationships, and transformations. The scale&#x27;s difficulty increases based on factors such as the number of quantities involved, the complexity of numerical relationships, and how much quantitative information must be derived.
+Level 0: None. The task does not require quantitative reasoning.
+Examples:
+* “Describe the color of the sky on a clear day.”
+* “Name a type of pet commonly found in households.”
+* “What is the capital city of Japan?”
+Level 1: Very low. The task involves only basic or rudimentary quantitative concepts (e.g., simple counting, basic comparisons). Requires only simple recall of basic quantitative facts. Requires minimal quantitative reasoning.
+Examples:
+* “Count the number of eggs in a small basket.”
+* “If your friend has 7 apples and you have 5, who has more apples?”
+* “Given this molecular requirements description, design a new molecule: The molecule is trianion of xanthosine 5&#x27;-triphosphate arising from deprotonation of three of the four free triphosphate OH groups. It is a conjugate base of a XTP.”
+Level 2: Low. The task requires relatively simple quantitative operations and concepts. Involves generally straightforward application of low-level mathematical principles. Some explicit quantitative reasoning is required.
+Examples:
+* “Calculate the average rainfall for a week if it rained 2 litres per square meter on Monday, 1 litres per square meter on Wednesday, and 4 litres per square meter on Friday.”
+* “If a recipe calls for 2 cups of flour to make 12 cookies, how much flour is needed to make 18 cookies?”
+* “A store is offering a 20% discount on a $50 shirt. What is the final price of the shirt?”
+Level 3: Intermediate. Involves moderately complex quantitative concepts and relationships. Requires application of non-trivial mathematical principles. Some necessary quantitative information may need to be inferred or calculated. Requires active engagement in quantitative reasoning processes.
+Examples:
+* “If bacteria double every 30 minutes and you start with 100 bacteria, how long will it take to reach 10,000 bacteria? Show your reasoning process.”
+* “Calculate the future value of a $1000 investment over 5 years at an annual rate of 5%, compounded quarterly, if $200 is added to the investment at the end of each year. Show the impact of these additional contributions.”
+* “A car travels at 60 kph for 2 hours, then at 45 kph for 1.5 hours, and finally at 30 kph for 1 hour over varied terrain. What is the average speed of the car and what is the total distance traveled?”
+Level 4: High. Requires complex quantitative operations. Involves the application of advanced mathematical concepts. Uses sophisticated numerical representations and relationships. Much necessary quantitative information may need to be inferred or generated. Requires an advanced level of quantitative reasoning processes.
+Examples:
+* “Using calculus, find the volume of the solid formed when the region bounded by the curves y = x² and y = 4 - x² is rotated around the y-axis.”
+* “Determine the stability of a system of differential equations by finding the eigenvalues and eigenvectors of its matrix representation, and then analyze whether the system converges to an equilibrium and discuss the implications of different eigenvalue scenarios on system stability.”
+* “Solve the second-order differential equation d²y/dx² + 4dy/dx + 4y = 0, and analyze the stability of its solutions.”
+Level 5: Very high. Involves extremely complex quantitative reasoning and mastery of mathematical insight. Requires the very complex integration of mathematical concepts. Uses abstract mathematical representations and theoretical quantitative concepts. Most necessary quantitative information may need to be inferred or generated through complex reasoning. Requires constant engagement and adjustment of quantitative reasoning at the expert level.
+Examples:
+* “Create a stochastic model for predicting future stock market trends using simulations and accounting for variables such as economic indicators, investor sentiment, and geopolitical events.”
+* “Using advanced statistical methods, design an experiment to test the efficacy of a new drug while accounting for multiple confounding variables and potential interaction effects.”
+* “Formulate a non-linear optimisation model for maximizing renewable energy output in a smart grid system, incorporating constraints such as energy storage capacity, variable supply and demand, and government regulations.”
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="SNs" style="display: none;">
-                        <h3>Rubric for Spatio-physical Reasoning (SNs)</h3>
-                        <p>[Rubric details for Spatio-physical Reasoning]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">Spatio-physical Reasoning (SN)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric assesses the complexity of spatial and physical understanding and reasoning required by a task. More specifically, the level represents the extent to which the task requires understanding spatial relationships between objects and predicting physical interactions, ranging from simple recognition of static relationships to complex mental manipulations involving multiple objects, transformations, and physical predictions across different dimensions. Notably, this should focus on the minimum way of solving the task since many tasks do not actually require spatio-physical reasoning to be successfully solved, even though spatio-physical reasoning may help.
+Level 0: None. Tasks at this level do not require spatial reasoning or physical intuition. There is no need to manipulate or visualize spatial relationships.
+Examples:
+* Copying text from one document to another without considering the layout.
+* Transcribing a sentence such as “The book is on the table” from an audio recording without needing to interpret or visualize the spatial reference.
+* Reciting a previously memorized sequence of numbers without spatial meaning.
+Level 1: Very low. Tasks involve simple recognition of spatial relationships but no mental manipulation is required for a successful task completion. Objects and their relationships are static and visible.
+Examples:
+* Identifying which shape matches a given template without rotating or manipulating it.
+* Recognizing whether a flat plate on the top of a book is stable or likely to remain balanced in its current position.
+* A convex 2019-gon \\(A_{1}A_{2}\\ldots A_{2019}\\) is cut into smaller pieces along its 2019 diagonals of the form \\(A_{i}A_{i+3}\\) for \\(1 \\leq i \\leq 2019\\), where \\(A_{2020}=A_{1}, A_{2021}=A_{2}\\), and \\(A_{2022}=A_{3}\\). What is the least possible number of resulting pieces?
+Level 2: Low. Tasks require basic common-sense predictions about physical interactions, or combined with simple spatial manipulations. The transformations are straightforward and involve only one or two objects.
+Examples:
+* Estimating whether a box will fit through a door based on a visual comparison of dimensions, where the difference in size between the box and the door is fairly noticeable.
+* Predicting the outcome of a very light ball (e.g., a table tennis ball) rolling into a much heavier, stationary object (e.g., a bowling ball). The task requires estimating the motion of the stationary heavy object, which will hardly move due to the significant difference in mass between the two objects.
+* Predicting whether a piece of soft clay will flatten when being pushed.
+Level 3: Intermediate. Tasks require coordinating multiple spatial relationships and performing sequential transformations. Mental models need to be constructed, involving intermediate levels of both physical prediction and spatial reasoning (3D reasoning or multiple steps in a 2D space), but focussing on the spatial.
+Examples:
+* Given a scenario where a glass vase is knocked off a table, hits the edge of a wooden chair, and then falls to the floor, predict the outcome in terms of break or survive.
+* Mentally visualize the trajectory of a thrown ball that arcs in the air and predict where it will land, accounting for a simple curve and the presence of a mild wind.
+* Interpreting a sequence of spatial instructions (e.g., “Walk past the bridge, turn right after the post office, then take the second left”) and constructing a mental model of the path based on multiple spatial references.
+Level 4: High. Tasks involve complex spatial transformations and integration of multiple spatial operations. Requires construction and manipulation of mental models, often involving prediction of outcomes of non-trivial spatial transformations.
+Examples:
+* Predicting how shadows will change as the position of a light source moves around a 3D object, requiring an understanding of light, geometry, and perspective.
+* A passage describes a football game where multiple players are moving relative to one another: &quot;John passed the ball to Mark, who was standing to the left of him, but then Sarah ran past both of them, taking the ball from the right side.&quot; The model must maintain spatial continuity by updating the players&#x27; relative positions and summarizing their final locations after each described action.
+* In a detective novel, a room’s layout is described as follows: &quot;The safe is hidden behind the large painting on the wall, to the right of the door. Opposite the painting is a window, and next to the window is a desk.&quot; The subject must interpret and visualize the spatial arrangement of objects within the room and answer questions about their relative positions (e.g., &quot;Where is the safe in relation to the desk?&quot;).
+Level 5: Very High. Tasks require very advanced spatial reasoning involving multiple simultaneous transformations and the prediction of highly complex spatial outcomes. These tasks involve predicting intricate chains of physical interactions and visualizing sophisticated spatial relationships that evolve over time or through multiple steps.
+Examples:
+* Writing or interpreting technical instructions for assembling a complex mechanical device, requiring precise descriptions of spatial relationships and the correct sequence of assembly steps, often involving 3D reasoning about how parts fit together.
+* A passage describes a complex laser setup: &quot;The initial laser beam enters horizontally through a beam splitter that divides it into two identical beams. The first beam reflects off three mirrors - one at 30 degrees on the wall, another mounted 15 degrees from the ceiling, and a third on the floor at 45 degrees. The second beam reflects off two mirrors - one perpendicular to the ground and another at 60 degrees on the opposite wall.&quot; The subject must trace both beams&#x27; paths, predict their final directions and positions after all the reflections, and determine whether the beams will intersect at any point in their paths.
+* A scientific article describes the structure of a  protein: &quot;The alpha-helix folds back on itself, forming hydrogen bonds with the beta-sheet that runs parallel, while the N-terminal aligns perpendicularly to the hydrophobic core.&quot; The task requires visualizing the 3D configuration of the protein and explaining the spatial relationships between the molecular elements described.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--primordial);">
+    <div class="tcolorbox-title" style="background-color: var(--primordial);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="KNa" style="display: none;">
-                        <h3>Rubric for Knowledge of Applied Sciences (KNa)</h3>
-                        <p>[Rubric details for Knowledge of Applied Sciences]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">Applied Sciences and Professions (KNa)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        The following rubric is designed to annotate the conceptual sophistication level of tasks based entirely on the depth of knowledge or conceptual understanding required in the fields of applied sciences and professions (e.g., medicine, law, education, business, agriculture, engineering except software and data engineering). Noteworthy, this rubric only focuses on applied knowledge and practical implementations rather than purely theoretical frameworks or abstract concepts from natural sciences, formal sciences, social sciences and humanities. For instance, understanding chemical reactions is only part of natural sciences, but applying this knowledge in pharmaceutical manufacturing would fall under applied sciences. Similarly, economic theory belongs only to social sciences, but practical business management and operations fall under applied sciences and professions. The focus is exclusively on the level of domain-specific knowledge needed, disregarding other cognitive demands such as reasoning or metacognition. This reflects only the depth of applied sciences and professional knowledge required.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            <li data-label="Level 0">
+          <span style="font-family: sans-serif;">
+            <strong>None: Tasks requiring no knowledge or understanding of applied sciences or professional fields.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">“Let $\\triangle A B C$ be an acute triangle, with $M$ being the midpoint of $\\overline{B C}$, such that $A M=B C$. Let $D$ and $E$ be the intersection of the internal angle bisectors of $\\angle A M B$ and $\\angle A M C$ with $A B$ and $A C$, respectively. Find the ratio of the area of $\\triangle D M E$ to the area of $\\triangle A B C$.”</span></li>
+                        <li><span style="font-family: sans-serif;">“In a chemical reaction at pH 1, an unknown substance was added that changed the pH to 4 and slowed down the reaction. What could have caused this?”</span></li>
+                        <li><span style="font-family: sans-serif;">“If a star 20 light-years away explodes, would gravitational waves reach Earth faster than light?”</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 1">
+          <span style="font-family: sans-serif;">
+            <strong>Very low: Tasks that require knowledge in applied sciences and professions typically acquired through elementary school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Basic personal hygiene and hand washing procedures.</span></li>
+                        <li><span style="font-family: sans-serif;">Common road signs and traffic signals.</span></li>
+                        <li><span style="font-family: sans-serif;">Basic safety rules at home and school.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 2">
+          <span style="font-family: sans-serif;">
+            <strong>Low: Tasks that require knowledge in applied sciences and professions typically acquired through middle school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">The use of basic measurement tools (thermometer, ruler, scale).</span></li>
+                        <li><span style="font-family: sans-serif;">Basic principles of personal finance and saving.</span></li>
+                        <li><span style="font-family: sans-serif;">Simple first aid for minor injuries.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 3">
+          <span style="font-family: sans-serif;">
+            <strong>Intermediate: Tasks that require knowledge in applied sciences and professions typically acquired through high school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Common legal terms (plaintiff, defendant, contract).</span></li>
+                        <li><span style="font-family: sans-serif;">Basic business concepts (budget, profit, loss).</span></li>
+                        <li><span style="font-family: sans-serif;">Fundamental principles of agricultural science.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 4">
+          <span style="font-family: sans-serif;">
+            <strong>High: Tasks that require knowledge in applied sciences and professions typically acquired through undergraduate education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Basic principles of bridge design in civil engineering.</span></li>
+                        <li><span style="font-family: sans-serif;">Core concepts of supply chain management.</span></li>
+                        <li><span style="font-family: sans-serif;">Fundamentals of clinical assessment in healthcare.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 5+">
+          <span style="font-family: sans-serif;">
+            <strong>Very high: Tasks that require knowledge in applied sciences and professions typically acquired through graduate education or beyond.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Gene therapy techniques in precision medicine.</span></li>
+                        <li><span style="font-family: sans-serif;">Engineering principles of nuclear fusion reactor design.</span></li>
+                        <li><span style="font-family: sans-serif;">Legal frameworks for regulating artificial intelligence systems.</span></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="KNc" style="display: none;">
-                        <h3>Rubric for Customary Everyday Knowledge (KNc)</h3>
-                        <p>[Rubric details for Customary Everyday Knowledge]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">Customary Everyday Knowledge (KNc)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        The following rubric is designed to annotate the conceptual sophistication level of tasks based solely on the depth of customary everyday knowledge required. This knowledge encompasses information that most people in a given society typically acquire through daily life experiences, social interactions, and exposure to popular media, rather than through formal education or specialized training. This does not include specialized knowledge from the natural sciences, social sciences, humanities, formal sciences, or applied sciences and professions. This reflects only the depth of customary everyday knowledge required.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            <li data-label="Level 0">
+          <span style="font-family: sans-serif;">
+            <strong>None: Tasks do not require any customary everyday knowledge.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Looking in a mirror and checking if there&#x27;s any dirt in your face.</span></li>
+                        <li><span style="font-family: sans-serif;">Recognizing that two objects are of the same color.</span></li>
+                        <li><span style="font-family: sans-serif;">Basic arithmetic calculations.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 1">
+          <span style="font-family: sans-serif;">
+            <strong>Very low: Tasks that require basic knowledge universally shared within a society.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Knowing that “10h” may refer to the morning or to the evening.</span></li>
+                        <li><span style="font-family: sans-serif;">A brownie is better served as a dessert than an appetiser.</span></li>
+                        <li><span style="font-family: sans-serif;">Common objects in daily life (chairs, tables, cars).</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 2">
+          <span style="font-family: sans-serif;">
+            <strong>Low: Tasks that require customary everyday knowledge typically possessed by most adults in a society.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Basic kitchen tools and their uses.</span></li>
+                        <li><span style="font-family: sans-serif;">Common traffic signs and their meanings.</span></li>
+                        <li><span style="font-family: sans-serif;">Major holidays in one&#x27;s culture.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 3">
+          <span style="font-family: sans-serif;">
+            <strong>Intermediate: Tasks that require general knowledge typically possessed by socially engaged members of society.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Different types of payment methods (cash, credit cards, digital wallets).</span></li>
+                        <li><span style="font-family: sans-serif;">Common technology features (touch screens, wireless connectivity, cloud storage).</span></li>
+                        <li><span style="font-family: sans-serif;">Standard retail practices (return policies, warranties, seasonal sales).</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 4">
+          <span style="font-family: sans-serif;">
+            <strong>High: Tasks that require extensive everyday knowledge gained through active engagement in society.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Major generational trends in technology adoption (from landlines to smartphones).</span></li>
+                        <li><span style="font-family: sans-serif;">Common real estate concepts (mortgages, leases, property taxes).</span></li>
+                        <li><span style="font-family: sans-serif;">Dietary restrictions across different groups (religious, health-based, ethical).</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 5+">
+          <span style="font-family: sans-serif;">
+            <strong>Very high: Tasks that require comprehensive everyday knowledge across diverse cultural and social contexts.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Gift-giving customs and taboos across different cultures.</span></li>
+                        <li><span style="font-family: sans-serif;">Business etiquette variations in major world regions.</span></li>
+                        <li><span style="font-family: sans-serif;">Dining customs and table manners in different societies.</span></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="KNf" style="display: none;">
-                        <h3>Rubric for Knowledge of Formal Sciences (KNf)</h3>
-                        <p>[Rubric details for Knowledge of Formal Sciences]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">Formal Sciences (KNf)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        The following rubric is designed to annotate the conceptual sophistication level of tasks based strictly on the depth of knowledge or conceptual understanding required in the fields of formal sciences (e.g., mathematics, logic, computer science, statistics). This does not include natural sciences (e.g., physics, chemistry, biology, astronomy, earth sciences, ecology) or social sciences and humanities (e.g., history, psychology, sociology, anthropology, literature, art, philosophy, linguistics). It&#x27;s crucial to understand that this rubric measures only the level of formal scientific knowledge needed, not considering other cognitive demands such as reasoning or metacognition. This indicates solely the depth of formal sciences knowledge required.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            <li data-label="Level 0">
+          <span style="font-family: sans-serif;">
+            <strong>None: Tasks require no knowledge or understanding of formal sciences.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">“Explaining the biological mechanisms of cellular respiration.”</span></li>
+                        <li><span style="font-family: sans-serif;">“Describing the major artistic movements of the Renaissance period.”</span></li>
+                        <li><span style="font-family: sans-serif;">“Explaining the rules of a sport.”</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 1">
+          <span style="font-family: sans-serif;">
+            <strong>Very low: Tasks that require knowledge in formal sciences typically acquired through elementary school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Basic arithmetic operations (+, -, ×, ÷).</span></li>
+                        <li><span style="font-family: sans-serif;">Names and properties of basic shapes (square, circle, triangle).</span></li>
+                        <li><span style="font-family: sans-serif;">Understanding that a programming loop with 10 repetitions takes double time than a loop with 5 repetitions.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 2">
+          <span style="font-family: sans-serif;">
+            <strong>Low: Tasks that require knowledge in formal sciences typically acquired through middle school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Basic algebraic expressions and variables.</span></li>
+                        <li><span style="font-family: sans-serif;">Calculating mean, median, and mode.</span></li>
+                        <li><span style="font-family: sans-serif;">Properties of basic number systems (integers, decimals, fractions).</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 3">
+          <span style="font-family: sans-serif;">
+            <strong>Intermediate: Tasks that require knowledge in formal sciences typically acquired through high school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Basic geometric shapes and their properties.</span></li>
+                        <li><span style="font-family: sans-serif;">What an algorithm is.</span></li>
+                        <li><span style="font-family: sans-serif;">Fundamental concepts of logic and syllogisms.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 4">
+          <span style="font-family: sans-serif;">
+            <strong>High: Tasks that require knowledge in formal sciences typically acquired through undergraduate education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">The fundamental theorem of calculus.</span></li>
+                        <li><span style="font-family: sans-serif;">Principles of object-oriented programming.</span></li>
+                        <li><span style="font-family: sans-serif;">Basic concepts in linear algebra and matrix operations.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 5+">
+          <span style="font-family: sans-serif;">
+            <strong>Very high: Tasks that require knowledge in formal sciences typically acquired through graduate education or beyond.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Principles of homological algebra.</span></li>
+                        <li><span style="font-family: sans-serif;">Mathematical foundations of quantum computing.</span></li>
+                        <li><span style="font-family: sans-serif;">Advanced concepts in cryptography and their mathematical basis.</span></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="KNn" style="display: none;">
-                        <h3>Rubric for Knowledge of Natural Sciences (KNn)</h3>
-                        <p>[Rubric details for Knowledge of Natural Sciences]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">Natural Sciences (KNn)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric assesses the conceptual sophistication level of tasks based solely on the depth of knowledge or conceptual understanding required in the fields of natural sciences (e.g., physics, chemistry, biology, astronomy, earth sciences, ecology). This does not include social sciences and humanities (e.g., history, psychology, sociology, anthropology, literature, art, philosophy, linguistics) or formal sciences (e.g., mathematics, logic, computer science, statistics). It&#x27;s important to note that this rubric focuses exclusively on the domain-specific knowledge needed, not considering other cognitive demands such as reasoning or metacognition. This reflects the conceptual depth and specificity of the knowledge in natural sciences required, rather than the mere presence of scientific content.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            <li data-label="Level 0">
+          <span style="font-family: sans-serif;">
+            <strong>None: Tasks do not require any knowledge of natural sciences.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">“Write a python script to train a machine learning classifier for fake news detection.”</span></li>
+                        <li><span style="font-family: sans-serif;">“Analyze the symbolism in Shakespeare&#x27;s Hamlet”.</span></li>
+                        <li><span style="font-family: sans-serif;">“Calculate the cost of groceries.”</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 1">
+          <span style="font-family: sans-serif;">
+            <strong>Very low: Tasks that require knowledge in natural sciences typically acquired through elementary school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Living things need food, water, and air to survive.</span></li>
+                        <li><span style="font-family: sans-serif;">Basic parts of a plant (roots, stem, leaves).</span></li>
+                        <li><span style="font-family: sans-serif;">Day and night cycle and seasons.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 2">
+          <span style="font-family: sans-serif;">
+            <strong>Low: Tasks that require knowledge in natural sciences typically acquired through middle school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">The water cycle (evaporation, condensation, precipitation).</span></li>
+                        <li><span style="font-family: sans-serif;">Basic cellular structure (nucleus, membrane, cytoplasm).</span></li>
+                        <li><span style="font-family: sans-serif;">Simple food chains and ecosystems.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 3">
+          <span style="font-family: sans-serif;">
+            <strong>Intermediate: Tasks that require knowledge in natural sciences typically acquired through high school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Mendel&#x27;s laws of inheritance and basic genetics.</span></li>
+                        <li><span style="font-family: sans-serif;">The ideal gas law (PV = nRT).</span></li>
+                        <li><span style="font-family: sans-serif;">Newton&#x27;s three laws of motion.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 4">
+          <span style="font-family: sans-serif;">
+            <strong>High: Tasks that require knowledge in natural sciences typically acquired through undergraduate education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Hardy-Weinberg equilibrium and population genetics.</span></li>
+                        <li><span style="font-family: sans-serif;">Molecular orbital theory.</span></li>
+                        <li><span style="font-family: sans-serif;">The process of cellular respiration and its relationship to photosynthesis.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 5+">
+          <span style="font-family: sans-serif;">
+            <strong>Very high: Tasks that require knowledge in natural sciences typically acquired through graduate education or beyond.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">The theoretical frameworks of string theory and its implications.</span></li>
+                        <li><span style="font-family: sans-serif;">The six forms of quark flavors in particle physics.</span></li>
+                        <li><span style="font-family: sans-serif;">The role of quantum entanglement in biological systems.</span></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="KNs" style="display: none;">
-                        <h3>Rubric for Knowledge of Social Sciences (KNs)</h3>
-                        <p>[Rubric details for Knowledge of Social Sciences]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">Social Sciences and Humanities (KNs)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        The following rubric is designed to annotate the conceptual sophistication level of tasks based exclusively on the depth of knowledge or conceptual understanding required in the fields of social sciences and humanities (e.g., history, psychology, sociology, anthropology, literature, art, philosophy, linguistics). This does not include natural sciences (e.g., physics, chemistry, biology, astronomy, earth sciences, ecology) and formal sciences (e.g., mathematics, logic, computer science, statistics). It&#x27;s important to note that this rubric focuses exclusively on the  domain-specific knowledge needed, not considering other cognitive demands such as reasoning or metacognition. This reflects purely the depth of social sciences and humanities knowledge required.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--knowledge);">
+    <div class="tcolorbox-title" style="background-color: var(--knowledge);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            <li data-label="Level 0">
+          <span style="font-family: sans-serif;">
+            <strong>None: Tasks do not require any knowledge or understanding of social sciences or humanities.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">“Calculating the area of a rectangle with length 5 cm and width 3 cm.”</span></li>
+                        <li><span style="font-family: sans-serif;">“Explaining the process of photosynthesis in plants.”</span></li>
+                        <li><span style="font-family: sans-serif;">“Explaining the mathematical principles behind differential calculus.”</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 1">
+          <span style="font-family: sans-serif;">
+            <strong>Very low: Tasks that require knowledge in social sciences and humanities typically acquired through elementary school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Basic concepts of past, present, and future in history.</span></li>
+                        <li><span style="font-family: sans-serif;">Different types of communities (family, school, neighborhood).</span></li>
+                        <li><span style="font-family: sans-serif;">Traditional holidays and their basic meanings.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 2">
+          <span style="font-family: sans-serif;">
+            <strong>Low: Tasks that require knowledge in social sciences and humanities typically acquired through middle school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">Basic historical periods like &quot;ancient&quot; vs &quot;modern&quot; times.</span></li>
+                        <li><span style="font-family: sans-serif;">Different types of government (democracy, monarchy).</span></li>
+                        <li><span style="font-family: sans-serif;">Major world religions and their basic beliefs.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 3">
+          <span style="font-family: sans-serif;">
+            <strong>Intermediate: Tasks that require knowledge in social sciences and humanities typically acquired through high school education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">The role of the Silk Road in cultural exchange.</span></li>
+                        <li><span style="font-family: sans-serif;">Basic principles of cognitive psychology.</span></li>
+                        <li><span style="font-family: sans-serif;">Major literary movements (Romanticism, Realism).</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 4">
+          <span style="font-family: sans-serif;">
+            <strong>High: Tasks that require knowledge in social sciences and humanities typically acquired through undergraduate education.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">The socio-economic factors that led to the Industrial Revolution.</span></li>
+                        <li><span style="font-family: sans-serif;">Major sociological theories of social stratification.</span></li>
+                        <li><span style="font-family: sans-serif;">The main theoretical approaches in anthropology.</span></li>
+                    </ul>
+                </li>
+            <li data-label="Level 5+">
+          <span style="font-family: sans-serif;">
+            <strong>Very high: Tasks that require knowledge in social sciences and humanities typically acquired through graduate education or beyond.</strong>  <strong>Examples:</strong>
+          </span>
+                    <ul>
+                        <li><span style="font-family: sans-serif;">The major schools of Sanskrit poetics.</span></li>
+                        <li><span style="font-family: sans-serif;">The primary theoretical frameworks in phenomenology.</span></li>
+                        <li><span style="font-family: sans-serif;">Advanced theories in historical linguistics and their implications.</span></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="AT" style="display: none;">
-                        <h3>Rubric for Atypicality (AT)</h3>
-                        <p>[Rubric details for Atypicality]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--others);">
+    <div class="tcolorbox-title" style="background-color: var(--others);">Atypicality (AT)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric defines a scale that evaluates tasks based on how unlikely they appear in various sources (internet, textbooks, tests) and how unlikely the specific instance is to have been previously encountered and memorized. The scale ranges from exactly identical instances that are widely known to completely novel task formulations, focusing on the uniqueness of both the task type and the specific instance rather than its difficulty or complexity.
+Level 0: None. The task is a staple one. Exactly the same instance of the task appears many times on the Internet, textbooks or common psychological or achievement tests, and the solution is generally well-known and memorized. Examples:
+* &quot;What is 2 + 2?&quot;
+* &quot;Name the capital of France.&quot;
+* &quot;What gets wetter and wetter the more it dries?&quot;
+Level 1: Very Low. The task is very common and the specific task instance is likely to frequently appear on the Internet, textbooks or common psychological or achievement tests, so the chance that the solution is well-known and memorized is high. Examples:
+* “What is the derivative of sin(x)?”
+* “Define opportunity cost.”
+* “Name the seven continents.”
+Level 2: Low. The task is moderately common and the specific task instance varies somewhat from other common examples or is unlikely to have seen it before in exactly the same form, but possibly in variations. Examples:
+* &quot;What is 21251 + 2835?&quot;
+* &quot;Given the molecular SMILES: COC[C@H]1OC(=O)c2coc3c2[C@@]1(C)C1=C(C3=O)[C@@H]2CCC(=O)[C@@]2(C)C[C@H]1OC(C)=O, your task is to provide the detailed description of the molecule using your experienced chemical Molecular knowledge.”
+* &quot;Solve the following Math Olympiad question: Determine the greatest real number $ C $, such that for every positive integer $ n\ge 2 $, there exists $ x_1, x_2,..., x_n \in [-1,1]$, so that $$\prod_{1\le i&lt;j\le n}(x_i-x_j) \ge C^{\frac{n(n-1)}{2}}$$.&quot;
+Level 3: Intermediate. The task is somewhat common but the specific task instance is quite rare, and it is unlikely to appear in common sources (Internet, textbooks or common psychological or achievement tests). Examples:
+* &quot;What is 5205175017521571 + 68270867426872052?&quot;
+* “Among the following exoplanets, which one has the lowest density? a) An Earth-mass and Earth-radius planet. b) A planet with 3 Earth masses and a density of approximately 4.6 g/cm^3. c) A planet with the same composition as Earth but 1.5 times more massive than Earth. d) A planet with the same composition as Earth but half the mass of Earth.”
+* Get answers for the question based on the context, where answers derived from substrings in the context or categorized as [unanswerable]. Context: [&#x27;On May 1 , 2015 , Quentin announced his retirement .Quentin signed a minor league deal with the Seattle Mariners on April 22 , 2015 , and was assigned to the Tacoma Rainiers .On April 5 , 2015 , Quentin was traded to the Atlanta Braves along with Cameron Maybin , Matt Wisler , and Jordan Paroubeck , for Craig Kimbrel and Melvin Upton Jr . The Braves designated him for assignment later that day , and released him on April 14 .&#x27;, &#x27;On July 22 , 2012 , Quentin agreed to a three-year , $27 million contract extension through 2015 with a $10 million mutual option for 2016 , including a no-trade clause . This is an amazing opportunity to stay and play in the city I grew up in . said Quentin .&#x27;] Question: Who did Carlos Quentin work for in April 2016?
+Level 4: High. The task is not extremely uncommon and the specific task instance is infrequent or presented in notably different ways from standard formulations. Examples:
+* &quot;Create a measurement system where accuracy is expressed through different shapes rather than decimal places.&quot;
+* &quot;Assume that there exist only two types of people: knights and knaves. Knights always tell the truth, while knaves always lie.\nYou are given the statements from 5 characters. Based on their statements, infer who is a knight and who is a knave.\nA: B is a liar and D is a truth-teller.\nB: D is a truth-teller.\nC: If A is a truth-teller, then E is a liar.\nD: B is a truth-teller and A is a truth-teller.\nE: A is a liar.&quot;
+* “In the context of neurolinguistic processing models examining the interface between phonological working memory and syntactic parsing during real-time sentence comprehension, what is the primary anatomical structure that shows increased metabolic activity during novel word acquisition in fMRI studies?” [This is a very sophisticated way of asking “which part of the brain lights up when we learn new words?”]
+Level 5: Very High. The task is fundamentally different from those typically appearing on the Internet, textbooks or psychological or achievement tests, or, the specific task instance is very unlikely to have close analogues in those sources. Noteworthy, any tasks (simple or elaborate) that can be found in standard tests or benchmarks should be considered less than level 5. Examples:
+* &quot;Take 20 major sky constellations and design 20 Formula1 race circuits that follow the FIA regulations but mimic the shapes of the constellations.”
+* “Write a poem in fifty African languages, with each line in one language, with the number of letters e in the line being proportional to the speakers of those languages&quot;
+* &quot;List mathematical terms that are also dancing terms (like &#x27;step function&#x27; or &#x27;rotation&#x27;), then write dance instructions using only mathematical language. However, the dance must stem from an Asian country since I&#x27;m teaching a creative Asian dance course today to one student who happens to be a mathematician.&quot;
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--others);">
+    <div class="tcolorbox-title" style="background-color: var(--others);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                     <div class="rubric" id="VO" style="display: none;">
-                        <h3>Rubric for Volume (VO)</h3>
-                        <p>[Rubric details for Volume]</p>
+                        <div class="tcolorbox" style="border: 1px solid var(--others);">
+    <div class="tcolorbox-title" style="background-color: var(--others);">Volume (VO)</div>
+    <div class="tcolorbox-body">
+      <span style="font-family: sans-serif;">
+        This rubric defines a scale that evaluates the task purely based on its *volume*, i.e., the time a fully competent, experienced and motivated human would need to both read and complete the task in ideal conditions, not counting breaks or interruptions, regardless of the difficulty or cognitive demands of the task. The scale ranges from tasks requiring less than a second to those requiring more than 16 hours (1,000 minutes), focusing purely on volume of work rather than cognitive complexity or skill requirements. Time estimates assume the task performer has all necessary information, tools, and skills readily available, but works autonomously without the assistance of other humans or AI tools.
+Level 0: None. Volume: Negligible, requiring less than 1 second.
+Examples:
+* Checking the status of an indicator (e.g., a light on a machine).
+* Selecting a checkbox to confirm agreement.
+* Opening a pre-configured app or program.
+Level 1: Very Low. Requiring between 1 second and 1 minute.
+Examples:
+* Read a short online comment about merchandise to identify whether it has positive, neutral, or negative emotion.
+* Saving and uploading a single document to a pre-arranged folder.
+* Reading a short email and writing a brief confirmation email (e.g., confirming attendance to a meeting).
+Level 2: Low. Requiring between 1 minute and 10 minutes.
+Examples:
+* Writing a simple summary in half a page of the main points from a short memo or meeting.
+* Listening to an audio recording of one minute from a high-school level history class and answering a list of ten short factual questions.
+* Reading an inquiry and writing a few paragraphs long personalized email in response to an inquiry.
+Level 3: Intermediate. Requiring between 10 minutes and 100 minutes.
+Examples:
+* Proofreading and lightly editing a 4-page research article to improve flow and clarity.
+* Organizing and cataloging a personal collection of 50 books by genre, year, and author.
+* Reading a set of instructions and data based on a small experiment, and then writing a 500-word report based on it.
+Level 4: High. Requiring between 100 minutes (roughly 1.5 hours) and 1,000 minutes (about 16 hours).
+Examples:
+* Creating a 10-page technical manual including screenshots, step-by-step procedures, and troubleshooting guides for a specific software application.
+* Configuring 25 workstations with standardized software (5 applications per machine), security settings, and network access protocols.
+* Reading a 12-page position paper on language models&#x27; impact on education and verbally summarizing the paper’s key insights for colleagues.
+Level 5: Very High. Requiring more than 1,000 minutes (roughly 16 hours).
+Examples:
+* Planning and executing a 3-day workshop for 100 attendees, including scheduling 15 speakers and arranging catering for 6 meals.
+* Writing a high-quality 10-page research paper on the field of data science, requiring analysis of 50+ academic sources, including data visualization and statistical analysis of 3 datasets.
+* Reviewing the correctness of 2000+ simple geography exercises written by high-school students.
+* Conducting a financial audit covering 12 months of transactions (approximately 5,000 entries) across 5 department budgets, including reconciliation and variance analysis.
+      </span>
+    </div>
+</div>
+
+<!-- Second tcolorbox: Levels -->
+<div class="tcolorbox" style="border: 1px solid var(--others);">
+    <div class="tcolorbox-title" style="background-color: var(--others);">    Levels</div>
+    <div class="tcolorbox-body">
+        <ol class="levels" start="0">
+            </ol>
+        </div>
+    </div>
                     </div>
                 </div>
 
@@ -1421,20 +2242,20 @@
 
 
 <section class="section">
-        <div class="container is-max-desktop content">
-            <h1 class="title is-3">How to contribute</h1>
-            <div class="content has-text-justified">
-                <p> You can contribute by:
-                <ul>
-                    <li>Using the battery or the rubrics, and report your results with them.</li>
-                    <li>Extending the battery by applying the rubrics to your preferred or new benchmarks.</li>
-                    <li>Extending the rubrics by adding more levels or dimensions.</li>
-                </ul>
-                We are working on easy ways to contribute directly. In the meanwhile, please get in touch at:
-                jh2135 AT cam.ac.uk if you want to contribute.
-                </p>
-            </div>
+    <div class="container is-max-desktop content">
+        <h1 class="title is-3">How to contribute</h1>
+        <div class="content has-text-justified">
+            <p> You can contribute by:
+            <ul>
+                <li>Using the battery or the rubrics, and report your results with them.</li>
+                <li>Extending the battery by applying the rubrics to your preferred or new benchmarks.</li>
+                <li>Extending the rubrics by adding more levels or dimensions.</li>
+            </ul>
+            We are working on easy ways to contribute directly. In the meanwhile, please get in touch at:
+            jh2135 AT cam.ac.uk if you want to contribute.
+            </p>
         </div>
+    </div>
 </section>
 
 <!--BibTex citation -->
