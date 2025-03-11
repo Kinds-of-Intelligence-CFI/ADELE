@@ -4,6 +4,9 @@ How to edit the website:
 2. render the template by running `python render.py` (this requires the `jinjia` package), which creates a fresh `index.html` in the root
 3. Commit both the amended template and the rendered `index.py` (as the latter is what is used for the actual website)
 
+The rubrics are present in `.txt` format in `templates/rubrics`. In that same folder, there is a Python script that converts all 
+of them to the html format that is then imported in the jinjia template.  
+
 
 
 # Academic Project Page Template
@@ -59,3 +62,15 @@ Parts of this project page were adopted from the [Nerfies](https://nerfies.githu
 
 ## Website License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+
+# Plan and TODO
+
+- [X] Leave the top figure but with the description Jose suggested (This is a collaborative community…) on top
+- [X] A section with the table describing the dimensions and showing the text of each rubric below it (what is in the paper appendix with a selector that allows you to select one at a time)
+- [X] A section on the battery: I can put a link to it. I will put a table showing what datasets are in the battery and the obtained demands histograms (which are already there)
+- [X] A section of profiling LLM capabilities: short description, the radial profile plot for all LLMs at once, and then another selector that allows you to visualize the characteristic curve for one LLM at a time (or the one with all of them superimposed). In a second moment, we could also add something like a leaderboard (see https://www.swebench.com/#lite) for each separate dimension.
+- [X] I would probably skip the “predicting performance” section as that seems more of a thing about the paper.
+- [X] Then “how to contribute”, we can improve that iteratively, but at first we can say that people can run the rubrics on new datasets or test the battery on existing LLMs and do pull requests to add the results on the website. Actually, just starting with an email will be OK
+- [ ] ADD dataset link!
+ 
