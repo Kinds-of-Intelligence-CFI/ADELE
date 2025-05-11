@@ -8,7 +8,7 @@ Examples:
 
 
 Level 1: Very low. Most relevant information is readily identifiable, with minimal extraneous details. The respondent needs to do simple filtering or selection of information as they proceed with solving the task, but the relevance of information remains clear throughout the process.
-Example: 
+Examples:
 * "John has 5 apples and 3 oranges. How many apples does John have?"
 * "Alice’s mother has several brothers, one married to Helen, who currently lives in Barcelona. What’s Helen with respect to Alice?"
 * "The recipe calls for 4 cups of flour and 2 cups of sugar. How many cups of flour are needed?"
