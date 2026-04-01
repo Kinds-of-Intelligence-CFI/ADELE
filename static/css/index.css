@@ -103,6 +103,29 @@ h1, h2, h3, h4, h5, h6,
   border-bottom-color: var(--adele-accent);
 }
 
+/* Divider between section links and page links */
+.navbar.adele-nav .navbar-divider {
+  height: 1.25rem;
+  width: 1px;
+  background: var(--border-light);
+  margin: auto 0.25rem;
+  display: inline-block;
+}
+
+/* Page-level nav links (distinct from in-page anchors) */
+.navbar.adele-nav .nav-page-link {
+  background: var(--bg-tertiary);
+  border-radius: 5px;
+  margin: auto 0.25rem;
+  color: var(--adele-primary) !important;
+  font-weight: 600;
+}
+
+.navbar.adele-nav .nav-page-link:hover {
+  background: var(--adele-primary);
+  color: white !important;
+}
+
 /* ---------- Hero ---------- */
 .hero.adele-hero {
   background: linear-gradient(135deg, var(--adele-primary) 0%, var(--adele-primary-light) 100%);
