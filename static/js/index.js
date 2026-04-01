@@ -107,10 +107,6 @@ function initDimensionTabs() {
     btn.addEventListener('click', function () { selectDimension(btn); });
   });
 
-  // Auto-select first tab
-  if (buttons.length > 0) {
-    selectDimension(buttons[0]);
-  }
 }
 
 /* ---------- LLM Selector ---------- */
@@ -147,6 +143,18 @@ function initLLMSelector() {
   if (buttons.length > 0) {
     selectLLM(buttons[0]);
   }
+}
+
+/* ---------- Levels Toggle ---------- */
+function toggleLevels(show) {
+  var cards = document.querySelectorAll('.rubric-card');
+  cards.forEach(function (card) {
+    if (show) {
+      card.classList.add('show-levels');
+    } else {
+      card.classList.remove('show-levels');
+    }
+  });
 }
 
 /* ---------- Scroll Animations ---------- */
